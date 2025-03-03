@@ -192,64 +192,70 @@
 
 <div class="side-by-side">
     <div>
-        <h2>Convert Hermite to Cubic Bezier (TODO)</h2>
-        Quadratic Points:
+        <h2>Convert Hermite to Cubic Bezier</h2>
+        Hermite Points:
         <br>
-        <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
-        <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
+        <input type="text" id="hToB1x" name="quadraticBezier" placeholder="h0's x">
+        <input type="text" id="hToB1y" name="quadraticBezier" placeholder="h0's y">
         <br>
-        <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
-        <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
+        <input type="text" id="hToB2x" name="quadraticBezier" placeholder="h1's x">
+        <input type="text" id="hToB2y" name="quadraticBezier" placeholder="h1's y">
         <br>
-        <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
-        <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
+        <input type="text" id="hToB3x" name="quadraticBezier" placeholder="h0's dx">
+        <input type="text" id="hToB3y" name="quadraticBezier" placeholder="h0's dy">
         <br>
-        <button id="qToc">Convert</button>
+        <input type="text" id="hToB4x" name="quadraticBezier" placeholder="h1's dx">
+        <input type="text" id="hToB4y" name="quadraticBezier" placeholder="h1's dy">
+        <br>
+        <button id="hToB">Convert</button>
         <br><br>
-        Resulting Cubic Points:
+        Resulting Cubic Bezier Points:
         <br>
-        <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
-        <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
+        <input type="text" id="hToBResult1x" placeholder="b0's x" readonly>
+        <input type="text" id="hToBResult1y" placeholder="b0's y" readonly>
         <br>
-        <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
-        <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
+        <input type="text" id="hToBResult2x" placeholder="b1's x"  readonly>
+        <input type="text" id="hToBResult2y" placeholder="b1's y" readonly>
         <br>
-        <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
-        <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
+        <input type="text" id="hToBResult3x" placeholder="b2's x" readonly>
+        <input type="text" id="hToBResult3y" placeholder="b2's y" readonly>
         <br>
-        <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
-        <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
+        <input type="text" id="hToBResult4x" placeholder="b3's x" readonly>
+        <input type="text" id="hToBResult4y" placeholder="b3's y" readonly>
 
     </div>
 
     <div>
-        <h2>Convert Cubic Bezier to Hermite (TODO)</h2>
-        Quadratic Points:
+        <h2>Convert Cubic Bezier to Hermite</h2>
+        Cubic Bezier Points:
         <br>
-        <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
-        <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
+        <input type="text" id="bToH1x" name="quadraticBezier" placeholder="b0's x">
+        <input type="text" id="bToH1y" name="quadraticBezier" placeholder="b1's y">
         <br>
-        <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
-        <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
+        <input type="text" id="bToH2x" name="quadraticBezier" placeholder="b1's x">
+        <input type="text" id="bToH2y" name="quadraticBezier" placeholder="b1's y">
         <br>
-        <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
-        <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
+        <input type="text" id="bToH3x" name="quadraticBezier" placeholder="b2's x">
+        <input type="text" id="bToH3y" name="quadraticBezier" placeholder="b2's y">
         <br>
-        <button id="qToc">Convert</button>
+        <input type="text" id="bToH4x" name="quadraticBezier" placeholder="b3's x">
+        <input type="text" id="bToH4y" name="quadraticBezier" placeholder="b3's y">
+        <br>
+        <button id="bToH">Convert</button>
         <br><br>
-        Resulting Cubic Points:
+        Resulting Hermite Points:
         <br>
-        <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
-        <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
+        <input type="text" id="bToHResult1x" placeholder="h0's x" readonly>
+        <input type="text" id="bToHResult1y" placeholder="h0's y" readonly>
         <br>
-        <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
-        <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
+        <input type="text" id="bToHResult2x" placeholder="h1's x"  readonly>
+        <input type="text" id="bToHResult2y" placeholder="h1's y" readonly>
         <br>
-        <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
-        <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
+        <input type="text" id="bToHResult3x" placeholder="h0's dx" readonly>
+        <input type="text" id="bToHResult3y" placeholder="h0's dy" readonly>
         <br>
-        <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
-        <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
+        <input type="text" id="bToHResult4x" placeholder="h1's dx" readonly>
+        <input type="text" id="bToHResult4y" placeholder="h1's dy" readonly>
 
     </div>
 </div>
@@ -509,7 +515,17 @@
     <div id = "howDoneY"></div>
 
 </div>
-    <h2>Distance (TODO)</h2>
+    <h2>Distance</h2>
+    <div>
+    <input type="text" id="distX1" placeholder="x1">
+    <input type="text" id="distY1" placeholder="y1">
+    </div>
+    <div>
+    <input type="text" id="distX2" placeholder="x2">
+    <input type="text" id="distY2" placeholder="y2">
+    </div>
+    <input type="text" id="distance" placeholder="distance"  readonly>
+    <button id="distanceButton">Convert</button>
 <div>
 
 
@@ -533,6 +549,9 @@
     <script src="./bezToCard.js" type="module" defer></script>
     <script src="./cardToHerm.js" type="module" defer></script>
     <script src="./hermToCard.js" type="module" defer></script>
+    <script src="./distance.js" type="module" defer></script>
+    <script src="./hermToBez.js" type="module" defer></script>
+    <script src="./bezToHerm.js" type="module" defer></script>
 
 			
 		</div>
