@@ -37,7 +37,7 @@
     <br>
     <button id="qToc">Convert</button>
     <br><br>
-    Resulting Bezier Points:
+    Resulting Cubic Points:
     <br>
     <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
     <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
@@ -54,7 +54,7 @@
 </div>
 
 <div>
-    <h2>Connect Cubic to End of Quadratic</h2>
+    <h2>Connect Cubic Bezier to End of Quadratic Bezier</h2>
     Quadratic Points: (you do not need q0)
     <br>
     <input type="text" id="cAtQEnd1x" name="quadraticBezier" placeholder="q0's x">
@@ -66,12 +66,12 @@
     <input type="text" id="cAtQEnd3x" name="quadraticBezier" placeholder="q2's x">
     <input type="text" id="cAtQEnd3y" name="quadraticBezier" placeholder="q2's y">
     <br>
-    C(1) connection:
+    C(1) connection is 2/3, G(1) is any:
     <input type="text" id="cAtQEndScale" value = "2/3" placeholder="2/3">
     <br>
     <button id="cAtQEnd">Convert</button>
     <br><br>
-    Resulting Bezier Points:
+    Resulting Cubic Points:
     <br>
     <input type="text" id="cAtQEndResult1x" placeholder="b0's x" readonly>
     <input type="text" id="cAtQEndResult1y" placeholder="b0's y" readonly>
@@ -83,8 +83,91 @@
 
 </div>
 
+<div>
+    <h2>Connect Quadratic Bezier to End of Cubic Bezier</h2>
+    Cubic Points: (you do not need c0 or c1)
+    <br>
+    <input type="text" id="qAtCEnd1x" name="quadraticBezier" placeholder="c0's x">
+    <input type="text" id="qAtCEnd1y" name="quadraticBezier" placeholder="c0's y">
+    <br>
+    <input type="text" id="qAtCEnd2x" name="quadraticBezier" placeholder="c1's x">
+    <input type="text" id="qAtCEnd2y" name="quadraticBezier" placeholder="c1's y">
+    <br>
+    <input type="text" id="qAtCEnd3x" name="quadraticBezier" placeholder="c2's x">
+    <input type="text" id="qAtCEnd3y" name="quadraticBezier" placeholder="c2's y">
+    <br>
+    <input type="text" id="qAtCEnd4x" name="quadraticBezier" placeholder="c3's x">
+    <input type="text" id="qAtCEnd4y" name="quadraticBezier" placeholder="c3's y">
+    <br>
+    C(1) connection is 3/2, G(1) is any:
+    <input type="text" id="qAtCEndScale" value = "3/2" placeholder="3/2">
+    <br>
+    <button id="qAtCEnd">Convert</button>
+    <br><br>
+    Resulting Quadratic Points:
+    <br>
+    <input type="text" id="qAtCEndResult1x" placeholder="q0's x" readonly>
+    <input type="text" id="qAtCEndResult1y" placeholder="q0's y" readonly>
+    <br>
+    <input type="text" id="qAtCEndResult2x" placeholder="q1's x"  readonly>
+    <input type="text" id="qAtCEndResult2y" placeholder="q1's y" readonly>
+    <br>
+    q2 does not matter
+
+</div>
+
+<div>
+    <h2>Connecting Cubic Between 2 Cubics with C(1)</h2>
+    First Cubic Points: (you do not need a0 or a1)
+    <br>
+    <input type="text" id="cBetw2C1x" name="quadraticBezier" placeholder="a0's x">
+    <input type="text" id="cBetw2C1y" name="quadraticBezier" placeholder="a0's y">
+    <br>
+    <input type="text" id="cBetw2C2x" name="quadraticBezier" placeholder="a1's x">
+    <input type="text" id="cBetw2C2y" name="quadraticBezier" placeholder="a1's y">
+    <br>
+    <input type="text" id="cBetw2C3x" name="quadraticBezier" placeholder="a2's x">
+    <input type="text" id="cBetw2C3y" name="quadraticBezier" placeholder="a2's y">
+    <br>
+    <input type="text" id="cBetw2C4x" name="quadraticBezier" placeholder="a3's x">
+    <input type="text" id="cBetw2C4y" name="quadraticBezier" placeholder="a3's y">
+    <br><br>
+    Second Cubic Points: (you do not need c2 or c3)
+    <br>
+    <input type="text" id="cBetw2C1x" name="quadraticBezier" placeholder="c0's x">
+    <input type="text" id="cBetw2C1y" name="quadraticBezier" placeholder="c0's y">
+    <br>
+    <input type="text" id="cBetw2C2x" name="quadraticBezier" placeholder="c1's x">
+    <input type="text" id="cBetw2C2y" name="quadraticBezier" placeholder="c1's y">
+    <br>
+    <input type="text" id="cBetw2C3x" name="quadraticBezier" placeholder="c2's x">
+    <input type="text" id="cBetw2C3y" name="quadraticBezier" placeholder="c2's y">
+    <br>
+    <input type="text" id="cBetw2C4x" name="quadraticBezier" placeholder="c3's x">
+    <input type="text" id="cBetw2C4y" name="quadraticBezier" placeholder="c3's y">
+    <br>
+    <button id="cBetw2C">Convert</button>
+    <br><br>
+    Resulting Cubic Points:
+    <br>
+    <input type="text" id="cBetw2CResult1x" placeholder="b0's x" readonly>
+    <input type="text" id="cBetw2CResult1y" placeholder="b0's y" readonly>
+    <br>
+    <input type="text" id="cBetw2CResult2x" placeholder="b1's x"  readonly>
+    <input type="text" id="cBetw2CResult2y" placeholder="b1's y" readonly>
+    <br>
+    <input type="text" id="cBetw2CResult3x" placeholder="b2's x"  readonly>
+    <input type="text" id="cBetw2CResult3y" placeholder="b2's y" readonly>
+    <br>
+    <input type="text" id="cBetw2CResult4x" placeholder="b3's x"  readonly>
+    <input type="text" id="cBetw2CResult4y" placeholder="b3's y" readonly>
+    <br>
+
+</div>
+
     <script src="./quadToCubic.js" type="module" defer></script>    
-    <script src="./cubicAtEndQuad.js" type="module" defer></script>       
+    <script src="./cubicAtEndQuad.js" type="module" defer></script>   
+    <script src="./quadAtEndCubic.js" type="module" defer></script>    
 			
 		</div>
 	</article>
