@@ -29,10 +29,10 @@ let convert = document.getElementById("cToH");
 
 convert.onclick = function() {
     // calculate the cubic control points
-    cardToBez();
+    cardToHerm();
 }
 
-function cardToBez() {
+function cardToHerm() {
     let scale;
     // get the scale
     if (isFraction.checked) {

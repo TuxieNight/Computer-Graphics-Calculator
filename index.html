@@ -110,7 +110,7 @@
 
 <div class = "side-by-side">
     <div>
-        <h2>Convert Cardinal to Hermite (TODO)</h2>
+        <h2>Convert Cardinal to Hermite</h2>
         Cardinal Points:
         <br>
         <input type="text" id="cToH1x" name="quadraticBezier" placeholder="c0's x">
@@ -150,33 +150,42 @@
     </div>
 
     <div>
-        <h2>Convert Hermite to Cardinal (TODO)</h2>
-        Quadratic Points:
+        <h2>Convert Hermite to Cardinal</h2>
+        Hermite Points:
         <br>
-        <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
-        <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
+        <input type="text" id="hToC1x" placeholder="h0's x">
+        <input type="text" id="hToC1y" placeholder="h0's y">
         <br>
-        <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
-        <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
+        <input type="text" id="hToC2x" placeholder="h1's x">
+        <input type="text" id="hToC2y" placeholder="h1's y">
         <br>
-        <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
-        <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
+        Hermite Tangents:
         <br>
-        <button id="qToc">Convert</button>
+        <input type="text" id="hToC3x" placeholder="h0's dx">
+        <input type="text" id="hToC3y" placeholder="h0's dy">
+        <br>
+        <input type="text" id="hToC4x" placeholder="h1's dx">
+        <input type="text" id="hToC4y" placeholder="h1's dy">
+        <br>
+        s value: <input type="text" id="hToCScale" name="quadraticBezier" value = "1/2">
+        <br>
+        s is fraction:<input type="checkbox" id="hToCFraction" name="hToCFraction" checked = "true">
+        <br>
+        <button id="hToC">Convert</button>
         <br><br>
-        Resulting Cubic Points:
+        Resulting Cardinal Points:
         <br>
-        <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
-        <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
+        <input type="text" id="hToCResult1x" placeholder="c0's x" readonly>
+        <input type="text" id="hToCResult1y" placeholder="c0's y" readonly>
         <br>
-        <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
-        <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
+        <input type="text" id="hToCResult2x" placeholder="c1's x"  readonly>
+        <input type="text" id="hToCResult2y" placeholder="c1's y" readonly>
         <br>
-        <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
-        <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
+        <input type="text" id="hToCResult3x" placeholder="c2's x" readonly>
+        <input type="text" id="hToCResult3y" placeholder="c2's y" readonly>
         <br>
-        <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
-        <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
+        <input type="text" id="hToCResult4x" placeholder="c3's x" readonly>
+        <input type="text" id="hToCResult4y" placeholder="c3's y" readonly>
 
     </div>
 </div>
@@ -535,6 +544,7 @@
     <script src="./cardToBez.js" type="module" defer></script>
     <script src="./bezToCard.js" type="module" defer></script>
     <script src="./cardToHerm.js" type="module" defer></script>
+    <script src="./hermToCard.js" type="module" defer></script>
     <script src="./distance.js" type="module" defer></script>
 			
 		</div>
