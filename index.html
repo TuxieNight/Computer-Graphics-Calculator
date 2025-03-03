@@ -402,50 +402,47 @@
 </div>
 
 <div>
-    <h2>Connecting Quadratic Bezier Between 2 Cubic Beziers with G(1) (TODO)</h2>
-    First Cubic Points: (you do not need a0 or a1)
+    <h2>Connecting Quadratic Bezier Between 2 Cubic Beziers with G(1)</h2>
+    First Cubic Bezier Points: (you do not need a0 or a1)
     <br>
-    <input type="text" id="cBetw2C11x" name="quadraticBezier" placeholder="a0's x">
-    <input type="text" id="cBetw2C11y" name="quadraticBezier" placeholder="a0's y">
+    <input type="text" id="qBetw2C11x" name="quadraticBezier" placeholder="a0's x">
+    <input type="text" id="qBetw2C11y" name="quadraticBezier" placeholder="a0's y">
     <br>
-    <input type="text" id="cBetw2C12x" name="quadraticBezier" placeholder="a1's x">
-    <input type="text" id="cBetw2C12y" name="quadraticBezier" placeholder="a1's y">
+    <input type="text" id="qBetw2C12x" name="quadraticBezier" placeholder="a1's x">
+    <input type="text" id="qBetw2C12y" name="quadraticBezier" placeholder="a1's y">
     <br>
-    <input type="text" id="cBetw2C13x" name="quadraticBezier" placeholder="a2's x">
-    <input type="text" id="cBetw2C13y" name="quadraticBezier" placeholder="a2's y">
+    <input type="text" id="qBetw2C13x" name="quadraticBezier" placeholder="a2's x">
+    <input type="text" id="qBetw2C13y" name="quadraticBezier" placeholder="a2's y">
     <br>
-    <input type="text" id="cBetw2C14x" name="quadraticBezier" placeholder="a3's x">
-    <input type="text" id="cBetw2C14y" name="quadraticBezier" placeholder="a3's y">
+    <input type="text" id="qBetw2C14x" name="quadraticBezier" placeholder="a3's x">
+    <input type="text" id="qBetw2C14y" name="quadraticBezier" placeholder="a3's y">
     <br><br>
-    Second Cubic Points: (you do not need c2 or c3)
+    Second Cubic Bezier Points: (you do not need c2 or c3)
     <br>
-    <input type="text" id="cBetw2C21x" name="quadraticBezier" placeholder="c0's x">
-    <input type="text" id="cBetw2C21y" name="quadraticBezier" placeholder="c0's y">
+    <input type="text" id="qBetw2C21x" name="quadraticBezier" placeholder="c0's x">
+    <input type="text" id="qBetw2C21y" name="quadraticBezier" placeholder="c0's y">
     <br>
-    <input type="text" id="cBetw2C22x" name="quadraticBezier" placeholder="c1's x">
-    <input type="text" id="cBetw2C22y" name="quadraticBezier" placeholder="c1's y">
+    <input type="text" id="qBetw2C22x" name="quadraticBezier" placeholder="c1's x">
+    <input type="text" id="qBetw2C22y" name="quadraticBezier" placeholder="c1's y">
     <br>
-    <input type="text" id="cBetw2C23x" name="quadraticBezier" placeholder="c2's x">
-    <input type="text" id="cBetw2C23y" name="quadraticBezier" placeholder="c2's y">
+    <input type="text" id="qBetw2C23x" name="quadraticBezier" placeholder="c2's x">
+    <input type="text" id="qBetw2C23y" name="quadraticBezier" placeholder="c2's y">
     <br>
-    <input type="text" id="cBetw2C24x" name="quadraticBezier" placeholder="c3's x">
-    <input type="text" id="cBetw2C24y" name="quadraticBezier" placeholder="c3's y">
+    <input type="text" id="qBetw2C24x" name="quadraticBezier" placeholder="c3's x">
+    <input type="text" id="qBetw2C24y" name="quadraticBezier" placeholder="c3's y">
     <br>
-    <button id="cBetw2C">Convert</button>
+    <button id="qBetw2C">Convert</button>
     <br><br>
-    Resulting Cubic Points:
+    Resulting Quadratic Bezier Points:
     <br>
-    <input type="text" id="cBetw2CResult1x" placeholder="b0's x" readonly>
-    <input type="text" id="cBetw2CResult1y" placeholder="b0's y" readonly>
+    <input type="text" id="qBetw2CResult1x" placeholder="q0's x" readonly>
+    <input type="text" id="qBetw2CResult1y" placeholder="q0's y" readonly>
     <br>
-    <input type="text" id="cBetw2CResult2x" placeholder="b1's x"  readonly>
-    <input type="text" id="cBetw2CResult2y" placeholder="b1's y" readonly>
+    <input type="text" id="qBetw2CResult2x" placeholder="q1's x"  readonly>
+    <input type="text" id="qBetw2CResult2y" placeholder="q1's y" readonly>
     <br>
-    <input type="text" id="cBetw2CResult3x" placeholder="b2's x"  readonly>
-    <input type="text" id="cBetw2CResult3y" placeholder="b2's y" readonly>
-    <br>
-    <input type="text" id="cBetw2CResult4x" placeholder="b3's x"  readonly>
-    <input type="text" id="cBetw2CResult4y" placeholder="b3's y" readonly>
+    <input type="text" id="qBetw2CResult3x" placeholder="q2's x"  readonly>
+    <input type="text" id="qBetw2CResult3y" placeholder="q2's y" readonly>
     <br>
 
 </div>
@@ -530,11 +527,13 @@
     <script src="./cubicAtEndQuad.js" type="module" defer></script>   
     <script src="./quadAtEndCubic.js" type="module" defer></script>  
     <script src="./cubicBetween2Cubics.js" type="module" defer></script>  
+    <script src="./quadBetween2Cubics.js" type="module" defer></script>  
     <script src="./decastlejau.js" type="module" defer></script>
     <script src="./cardToBez.js" type="module" defer></script>
     <script src="./bezToCard.js" type="module" defer></script>
     <script src="./cardToHerm.js" type="module" defer></script>
     <script src="./hermToCard.js" type="module" defer></script>
+
 			
 		</div>
 	</article>
