@@ -41,7 +41,7 @@ function cardToBez() {
         scale = parseFloat(bToCScale.value);
     }
 
-    // get the quadratic control points
+    // get the bezier control points
     let b0x = parseFloat(bToC1x.value);
     let b0y = parseFloat(bToC1y.value);
 
@@ -54,7 +54,7 @@ function cardToBez() {
     let b3x = parseFloat(bToC4x.value);
     let b3y = parseFloat(bToC4y.value);
 
-    // calculate the cubic control points
+    // calculate the cardinal control points
     let c0x = b3x - 3*(1/scale)*(b1x - b0x);
     let c0y = b3y - 3*(1/scale)*(b1y - b0y);
 
