@@ -53,7 +53,38 @@
 
 </div>
 
-    <script src="./quadToCubic.js" type="module" defer></script>       
+<div>
+    <h2>Connect Cubic to End of Quadratic</h2>
+    Quadratic Points: (you do not need q0)
+    <br>
+    <input type="text" id="cAtQEnd1x" name="quadraticBezier" placeholder="q0's x">
+    <input type="text" id="cAtQEnd1y" name="quadraticBezier" placeholder="q0's y">
+    <br>
+    <input type="text" id="cAtQEnd2x" name="quadraticBezier" placeholder="q1's x">
+    <input type="text" id="cAtQEnd2y" name="quadraticBezier" placeholder="q1's y">
+    <br>
+    <input type="text" id="cAtQEnd3x" name="quadraticBezier" placeholder="q2's x">
+    <input type="text" id="cAtQEnd3y" name="quadraticBezier" placeholder="q2's y">
+    <br>
+    C(1) connection:
+    <input type="text" id="cAtQEndScale" value = "2/3" placeholder="2/3">
+    <br>
+    <button id="cAtQEnd">Convert</button>
+    <br><br>
+    Resulting Bezier Points:
+    <br>
+    <input type="text" id="cAtQEndResult1x" placeholder="b0's x" readonly>
+    <input type="text" id="cAtQEndResult1y" placeholder="b0's y" readonly>
+    <br>
+    <input type="text" id="cAtQEndResult2x" placeholder="b1's x"  readonly>
+    <input type="text" id="cAtQEndResult2y" placeholder="b1's y" readonly>
+    <br>
+    b2 and b3 do not matter
+
+</div>
+
+    <script src="./quadToCubic.js" type="module" defer></script>    
+    <script src="./cubicAtEndQuad.js" type="module" defer></script>       
 			
 		</div>
 	</article>
