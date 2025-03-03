@@ -22,10 +22,10 @@ let convert = document.getElementById("cAtQEnd");
 
 convert.onclick = function() {
     // calculate the cubic control points
-    quadToCubic();
+    cubicAtEndQuad();
 }
 
-function quadToCubic() {
+function cubicAtEndQuad() {
     // get the quadratic control points
     let q0x = parseFloat(cAtQEnd1x.value);
     let q0y = parseFloat(cAtQEnd1y.value);

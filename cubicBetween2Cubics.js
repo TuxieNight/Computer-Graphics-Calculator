@@ -41,10 +41,10 @@ let convert = document.getElementById("cBetw2C");
 
 convert.onclick = function() {
     // calculate the cubic control points
-    quadToCubic();
+    cubicBetween2Cubics();
 }
 
-function quadToCubic() {
+function cubicBetween2Cubics() {
     // get the curve control values
     let c1_1xValue = parseFloat(c1_1x.value);
     let c1_1yValue = parseFloat(c1_1y.value);

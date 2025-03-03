@@ -25,10 +25,10 @@ let convert = document.getElementById("qAtCEnd");
 
 convert.onclick = function() {
     // calculate the cubic control points
-    quadToCubic();
+    decastlejau();
 }
 
-function quadToCubic() {
+function decastlejau() {
     // get the quadratic control points
     let c0x = parseFloat(qAtCEnd1x.value);
     let c0y = parseFloat(qAtCEnd1y.value);
