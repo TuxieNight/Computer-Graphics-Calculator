@@ -120,31 +120,31 @@
     <h2>Connecting Cubic Between 2 Cubics with C(1)</h2>
     First Cubic Points: (you do not need a0 or a1)
     <br>
-    <input type="text" id="cBetw2C1x" name="quadraticBezier" placeholder="a0's x">
-    <input type="text" id="cBetw2C1y" name="quadraticBezier" placeholder="a0's y">
+    <input type="text" id="cBetw2C11x" name="quadraticBezier" placeholder="a0's x">
+    <input type="text" id="cBetw2C11y" name="quadraticBezier" placeholder="a0's y">
     <br>
-    <input type="text" id="cBetw2C2x" name="quadraticBezier" placeholder="a1's x">
-    <input type="text" id="cBetw2C2y" name="quadraticBezier" placeholder="a1's y">
+    <input type="text" id="cBetw2C12x" name="quadraticBezier" placeholder="a1's x">
+    <input type="text" id="cBetw2C12y" name="quadraticBezier" placeholder="a1's y">
     <br>
-    <input type="text" id="cBetw2C3x" name="quadraticBezier" placeholder="a2's x">
-    <input type="text" id="cBetw2C3y" name="quadraticBezier" placeholder="a2's y">
+    <input type="text" id="cBetw2C13x" name="quadraticBezier" placeholder="a2's x">
+    <input type="text" id="cBetw2C13y" name="quadraticBezier" placeholder="a2's y">
     <br>
-    <input type="text" id="cBetw2C4x" name="quadraticBezier" placeholder="a3's x">
-    <input type="text" id="cBetw2C4y" name="quadraticBezier" placeholder="a3's y">
+    <input type="text" id="cBetw2C14x" name="quadraticBezier" placeholder="a3's x">
+    <input type="text" id="cBetw2C14y" name="quadraticBezier" placeholder="a3's y">
     <br><br>
     Second Cubic Points: (you do not need c2 or c3)
     <br>
-    <input type="text" id="cBetw2C1x" name="quadraticBezier" placeholder="c0's x">
-    <input type="text" id="cBetw2C1y" name="quadraticBezier" placeholder="c0's y">
+    <input type="text" id="cBetw2C21x" name="quadraticBezier" placeholder="c0's x">
+    <input type="text" id="cBetw2C21y" name="quadraticBezier" placeholder="c0's y">
     <br>
-    <input type="text" id="cBetw2C2x" name="quadraticBezier" placeholder="c1's x">
-    <input type="text" id="cBetw2C2y" name="quadraticBezier" placeholder="c1's y">
+    <input type="text" id="cBetw2C22x" name="quadraticBezier" placeholder="c1's x">
+    <input type="text" id="cBetw2C22y" name="quadraticBezier" placeholder="c1's y">
     <br>
-    <input type="text" id="cBetw2C3x" name="quadraticBezier" placeholder="c2's x">
-    <input type="text" id="cBetw2C3y" name="quadraticBezier" placeholder="c2's y">
+    <input type="text" id="cBetw2C23x" name="quadraticBezier" placeholder="c2's x">
+    <input type="text" id="cBetw2C23y" name="quadraticBezier" placeholder="c2's y">
     <br>
-    <input type="text" id="cBetw2C4x" name="quadraticBezier" placeholder="c3's x">
-    <input type="text" id="cBetw2C4y" name="quadraticBezier" placeholder="c3's y">
+    <input type="text" id="cBetw2C24x" name="quadraticBezier" placeholder="c3's x">
+    <input type="text" id="cBetw2C24y" name="quadraticBezier" placeholder="c3's y">
     <br>
     <button id="cBetw2C">Convert</button>
     <br><br>
@@ -165,9 +165,67 @@
 
 </div>
 
+<div>
+    <h2>Decastlejau</h2>
+    Bezier Points:
+    <br>
+    <input type="text" id="Decastlejau1x" name="quadraticBezier" placeholder="b0's x">
+    <input type="text" id="Decastlejau1y" name="quadraticBezier" placeholder="b0's y">
+    <br>
+    <input type="text" id="Decastlejau2x" name="quadraticBezier" placeholder="b1's x">
+    <input type="text" id="Decastlejau2y" name="quadraticBezier" placeholder="b1's y">
+    <br>
+    <input type="text" id="Decastlejau3x" name="quadraticBezier" placeholder="b2's x">
+    <input type="text" id="Decastlejau3y" name="quadraticBezier" placeholder="b2's y">
+    <br>
+    <input type="text" id="Decastlejau4x" name="quadraticBezier" placeholder="b3's x">
+    <input type="text" id="Decastlejau4y" name="quadraticBezier" placeholder="b3's y">
+    <br><br>
+    u: <input type="text" id="pointU" name="quadraticBezier">
+    <br><br>
+    Is Quadratic:<input type="checkbox" id="DecastlejauCheckbox" name="DecastlejauCheckbox">
+    <br><br>
+    <button id="Decastlejau">Convert</button>
+    <br><br>
+    First Segment Points:
+    <br>
+    <input type="text" id="DecastlejauResult11x" placeholder="b0's x" readonly>
+    <input type="text" id="DecastlejauResult11y" placeholder="b0's y" readonly>
+    <br>
+    <input type="text" id="DecastlejauResult12x" placeholder="b1's x"  readonly>
+    <input type="text" id="DecastlejauResult12y" placeholder="b1's y" readonly>
+    <br>
+    <input type="text" id="DecastlejauResult13x" placeholder="b2's x"  readonly>
+    <input type="text" id="DecastlejauResult13y" placeholder="b2's y" readonly>
+    <br>
+    <input type="text" id="DecastlejauResult14x" placeholder="b3's x"  readonly>
+    <input type="text" id="DecastlejauResult14y" placeholder="b3's y" readonly>
+    <br><br>
+    Second Segment Points:
+    <br>
+    <input type="text" id="DecastlejauResult21x" placeholder="b0's x" readonly>
+    <input type="text" id="DecastlejauResult21y" placeholder="b0's y" readonly>
+    <br>
+    <input type="text" id="DecastlejauResult22x" placeholder="b1's x"  readonly>
+    <input type="text" id="DecastlejauResult22y" placeholder="b1's y" readonly>
+    <br>
+    <input type="text" id="DecastlejauResult23x" placeholder="b2's x"  readonly>
+    <input type="text" id="DecastlejauResult23y" placeholder="b2's y" readonly>
+    <br>
+    <input type="text" id="DecastlejauResult24x" placeholder="b3's x"  readonly>
+    <input type="text" id="DecastlejauResult24y" placeholder="b3's y" readonly>
+    <br>
+    <br>
+    The point at u:
+    <input type="text" id="pointU" placeholder="u"  readonly>
+
+</div>
+
     <script src="./quadToCubic.js" type="module" defer></script>    
     <script src="./cubicAtEndQuad.js" type="module" defer></script>   
-    <script src="./quadAtEndCubic.js" type="module" defer></script>    
+    <script src="./quadAtEndCubic.js" type="module" defer></script>  
+    <script src="./cubicBetween2Cubics.js" type="module" defer></script>  
+    <script src="./decastlejau.js" type="module" defer></script>
 			
 		</div>
 	</article>
