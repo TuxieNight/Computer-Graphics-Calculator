@@ -19,7 +19,7 @@ let qTocResult4x = document.getElementById("qTocResult4x");
 let qTocResult4y = document.getElementById("qTocResult4y");
 
 // get the button element
-let convert = document.getElementById("cAtQEnd");
+let convert = document.getElementById("qToc");
 
 convert.onclick = function() {
     // calculate the cubic control points

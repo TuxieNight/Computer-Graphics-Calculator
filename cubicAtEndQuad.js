@@ -10,6 +10,7 @@ let cAtQEnd3y = document.getElementById("cAtQEnd3y");
 
 // get scale
 let cAtQEndScale = document.getElementById("cAtQEndScale");
+let isFraction = document.getElementById("cAtQEndFraction");
 
 // get the output element
 let cAtQEndResult1x = document.getElementById("cAtQEndResult1x");
@@ -36,7 +37,13 @@ function cubicAtEndQuad() {
     let q2x = parseFloat(cAtQEnd3x.value);
     let q2y = parseFloat(cAtQEnd3y.value);
 
-    let scale = parseFraction(cAtQEndScale.value);
+    let scale;
+    if (isFraction.checked) {
+        scale = parseFraction(cAtQEndScale.value);
+    }
+    else {
+        scale = parseFloat(cAtQEndScale.value);
+    }
 
     // calculate the cubic control points
     let b0x = q2x;

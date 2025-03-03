@@ -9,6 +9,16 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./css/workbook.css">
         <script src="../../js/resizeIFrames.js"></script>
+        <style>
+            .side-by-side {
+                display: flex;
+                justify-content: space-between;
+            }
+            .side-by-side > div {
+                flex: 1;
+                margin: 10px;
+            }
+        </style>
     </head>
     <body>
         <div class="container container--outer"><div class="maincolumn">
@@ -21,190 +31,209 @@
         
 		<div class="content post__content clearfix">
 
-<div>
-    <h2>Convert Cardinal to Cubic Bezier (TODO)</h2>
-    Quadratic Points:
-    <br>
-    <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
-    <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
-    <br>
-    <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
-    <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
-    <br>
-    <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
-    <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
-    <br>
-    <button id="qToc">Convert</button>
-    <br><br>
-    Resulting Cubic Points:
-    <br>
-    <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
-    <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
-    <br>
-    <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
-    <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
-    <br>
-    <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
-    <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
-    <br>
-    <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
-    <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
+<div class="side-by-side">
+    <div>
+        <h2>Convert Cardinal to Cubic Bezier</h2>
+        Cardinal Points:
+        <br>
+        <input type="text" id="cToB1x" name="quadraticBezier" placeholder="c0's x">
+        <input type="text" id="cToB1y" name="quadraticBezier" placeholder="c0's y">
+        <br>
+        <input type="text" id="cToB2x" name="quadraticBezier" placeholder="c1's x">
+        <input type="text" id="cToB2y" name="quadraticBezier" placeholder="c1's y">
+        <br>
+        <input type="text" id="cToB3x" name="quadraticBezier" placeholder="c2's x">
+        <input type="text" id="cToB3y" name="quadraticBezier" placeholder="c2's y">
+        <br>
+        <input type="text" id="cToB4x" name="quadraticBezier" placeholder="c3's x">
+        <input type="text" id="cToB4y" name="quadraticBezier" placeholder="c3's y">
+        <br>
+        s value: <input type="text" id="cToBScale" name="quadraticBezier" value = "1/2">
+        <br>
+        s is fraction:<input type="checkbox" id="cToBFraction" name="cToBFraction" checked = "true">
+        <br>
+        <button id="cToB">Convert</button>
+        <br><br>
+        Resulting Cubic Bezier Points:
+        <br>
+        <input type="text" id="cToBResult1x" placeholder="b0's x" readonly>
+        <input type="text" id="cToBResult1y" placeholder="b0's y" readonly>
+        <br>
+        <input type="text" id="cToBResult2x" placeholder="b1's x"  readonly>
+        <input type="text" id="cToBResult2y" placeholder="b1's y" readonly>
+        <br>
+        <input type="text" id="cToBResult3x" placeholder="b2's x" readonly>
+        <input type="text" id="cToBResult3y" placeholder="b2's y" readonly>
+        <br>
+        <input type="text" id="cToBResult4x" placeholder="b3's x" readonly>
+        <input type="text" id="cToBResult4y" placeholder="b3's y" readonly>
 
+    </div>
+
+    <div>
+        <h2>Convert Cubic Bezier to Cardinal</h2>
+        Cubic Bezier Points:
+        <br>
+        <input type="text" id="bToC1x" name="quadraticBezier" placeholder="b0's x">
+        <input type="text" id="bToC1y" name="quadraticBezier" placeholder="b0's y">
+        <br>
+        <input type="text" id="bToC2x" name="quadraticBezier" placeholder="b1's x">
+        <input type="text" id="bToC2y" name="quadraticBezier" placeholder="b1's y">
+        <br>
+        <input type="text" id="bToC3x" name="quadraticBezier" placeholder="b2's x">
+        <input type="text" id="bToC3y" name="quadraticBezier" placeholder="b2's y">
+        <br>
+        <input type="text" id="bToC4x" name="quadraticBezier" placeholder="b3's x">
+        <input type="text" id="bToC4y" name="quadraticBezier" placeholder="b3's y">
+        <br>
+        s value: <input type="text" id="bToCScale" name="quadraticBezier" value = "1/2">
+        <br>
+        s is fraction:<input type="checkbox" id="bToCFraction" name="bToCFraction" checked = "true">
+        <br>
+        <button id="bToC">Convert</button>
+        <br><br>
+        Resulting Cardinal Points:
+        <br>
+        <input type="text" id="bToCResult1x" placeholder="c0's x" readonly>
+        <input type="text" id="bToCResult1y" placeholder="c0's y" readonly>
+        <br>
+        <input type="text" id="bToCResult2x" placeholder="c1's x"  readonly>
+        <input type="text" id="bToCResult2y" placeholder="c1's y" readonly>
+        <br>
+        <input type="text" id="bToCResult3x" placeholder="c2's x" readonly>
+        <input type="text" id="bToCResult3y" placeholder="c2's y" readonly>
+        <br>
+        <input type="text" id="bToCResult4x" placeholder="c3's x" readonly>
+        <input type="text" id="bToCResult4y" placeholder="c3's y" readonly>
+    </div>
 </div>
 
-<div>
-    <h2>Convert Cubic Bezier to Cardinal (TODO)</h2>
-    Quadratic Points:
-    <br>
-    <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
-    <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
-    <br>
-    <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
-    <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
-    <br>
-    <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
-    <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
-    <br>
-    <button id="qToc">Convert</button>
-    <br><br>
-    Resulting Cubic Points:
-    <br>
-    <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
-    <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
-    <br>
-    <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
-    <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
-    <br>
-    <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
-    <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
-    <br>
-    <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
-    <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
+<div class = "side-by-side">
+    <div>
+        <h2>Convert Cardinal to Hermite (TODO)</h2>
+        Quadratic Points:
+        <br>
+        <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
+        <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
+        <br>
+        <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
+        <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
+        <br>
+        <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
+        <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
+        <br>
+        <button id="qToc">Convert</button>
+        <br><br>
+        Resulting Cubic Points:
+        <br>
+        <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
+        <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
+        <br>
+        <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
+        <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
+        <br>
+        <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
+        <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
+        <br>
+        <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
+        <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
 
+    </div>
+
+    <div>
+        <h2>Convert Hermite to Cardinal (TODO)</h2>
+        Quadratic Points:
+        <br>
+        <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
+        <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
+        <br>
+        <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
+        <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
+        <br>
+        <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
+        <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
+        <br>
+        <button id="qToc">Convert</button>
+        <br><br>
+        Resulting Cubic Points:
+        <br>
+        <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
+        <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
+        <br>
+        <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
+        <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
+        <br>
+        <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
+        <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
+        <br>
+        <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
+        <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
+
+    </div>
 </div>
 
-<div>
-    <h2>Convert Cardinal to Hermite (TODO)</h2>
-    Quadratic Points:
-    <br>
-    <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
-    <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
-    <br>
-    <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
-    <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
-    <br>
-    <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
-    <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
-    <br>
-    <button id="qToc">Convert</button>
-    <br><br>
-    Resulting Cubic Points:
-    <br>
-    <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
-    <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
-    <br>
-    <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
-    <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
-    <br>
-    <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
-    <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
-    <br>
-    <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
-    <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
+<div class="side-by-side">
+    <div>
+        <h2>Convert Hermite to Cubic Bezier (TODO)</h2>
+        Quadratic Points:
+        <br>
+        <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
+        <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
+        <br>
+        <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
+        <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
+        <br>
+        <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
+        <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
+        <br>
+        <button id="qToc">Convert</button>
+        <br><br>
+        Resulting Cubic Points:
+        <br>
+        <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
+        <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
+        <br>
+        <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
+        <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
+        <br>
+        <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
+        <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
+        <br>
+        <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
+        <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
 
-</div>
+    </div>
 
-<div>
-    <h2>Convert Hermite to Cardinal (TODO)</h2>
-    Quadratic Points:
-    <br>
-    <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
-    <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
-    <br>
-    <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
-    <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
-    <br>
-    <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
-    <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
-    <br>
-    <button id="qToc">Convert</button>
-    <br><br>
-    Resulting Cubic Points:
-    <br>
-    <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
-    <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
-    <br>
-    <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
-    <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
-    <br>
-    <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
-    <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
-    <br>
-    <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
-    <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
+    <div>
+        <h2>Convert Cubic Bezier to Hermite (TODO)</h2>
+        Quadratic Points:
+        <br>
+        <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
+        <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
+        <br>
+        <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
+        <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
+        <br>
+        <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
+        <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
+        <br>
+        <button id="qToc">Convert</button>
+        <br><br>
+        Resulting Cubic Points:
+        <br>
+        <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
+        <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
+        <br>
+        <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
+        <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
+        <br>
+        <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
+        <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
+        <br>
+        <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
+        <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
 
-</div>
-
-<div>
-    <h2>Convert Hermite to Cubic Bezier (TODO)</h2>
-    Quadratic Points:
-    <br>
-    <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
-    <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
-    <br>
-    <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
-    <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
-    <br>
-    <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
-    <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
-    <br>
-    <button id="qToc">Convert</button>
-    <br><br>
-    Resulting Cubic Points:
-    <br>
-    <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
-    <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
-    <br>
-    <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
-    <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
-    <br>
-    <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
-    <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
-    <br>
-    <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
-    <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
-
-</div>
-
-<div>
-    <h2>Convert Cubic Bezier to Hermite (TODO)</h2>
-    Quadratic Points:
-    <br>
-    <input type="text" id="qToc1x" name="quadraticBezier" placeholder="q0's x">
-    <input type="text" id="qToc1y" name="quadraticBezier" placeholder="q0's y">
-    <br>
-    <input type="text" id="qToc2x" name="quadraticBezier" placeholder="q1's x">
-    <input type="text" id="qToc2y" name="quadraticBezier" placeholder="q1's y">
-    <br>
-    <input type="text" id="qToc3x" name="quadraticBezier" placeholder="q2's x">
-    <input type="text" id="qToc3y" name="quadraticBezier" placeholder="q2's y">
-    <br>
-    <button id="qToc">Convert</button>
-    <br><br>
-    Resulting Cubic Points:
-    <br>
-    <input type="text" id="qTocResult1x" placeholder="b0's x" readonly>
-    <input type="text" id="qTocResult1y" placeholder="b0's y" readonly>
-    <br>
-    <input type="text" id="qTocResult2x" placeholder="b1's x"  readonly>
-    <input type="text" id="qTocResult2y" placeholder="b1's y" readonly>
-    <br>
-    <input type="text" id="qTocResult3x" placeholder="b2's x" readonly>
-    <input type="text" id="qTocResult3y" placeholder="b2's y" readonly>
-    <br>
-    <input type="text" id="qTocResult4x" placeholder="b3's x" readonly>
-    <input type="text" id="qTocResult4y" placeholder="b3's y" readonly>
-
+    </div>
 </div>
 
 <div>
@@ -254,6 +283,8 @@
     C(1) connection is 2/3, G(1) is any:
     <input type="text" id="cAtQEndScale" value = "2/3" placeholder="2/3">
     <br>
+    scale is fraction:<input type="checkbox" id="cAtQEndFraction" name="cAtQEndFraction" checked = "true">
+    <br>
     <button id="cAtQEnd">Convert</button>
     <br><br>
     Resulting Cubic Points:
@@ -286,6 +317,8 @@
     <br>
     C(1) connection is 3/2, G(1) is any:
     <input type="text" id="qAtCEndScale" value = "3/2" placeholder="3/2">
+    <br>
+    scale is fraction:<input type="checkbox" id="qAtCEndFraction" name="qAtCEndFraction" checked = "true">
     <br>
     <button id="qAtCEnd">Convert</button>
     <br><br>
@@ -461,12 +494,27 @@
     <div id = "howDoneY"></div>
 
 </div>
+    <h2>Distance (TODO)</h2>
+<div>
+
+
+</div>
+    <h2>Bezier with Arc-Length Parameterization (TODO)</h2>
+<div>
+
+</div>
+    <h2>Connecting Cubic to end of cubic, quadratic to end of quadratic, put things side-by-side (TODO)</h2>
+<div>
+
+</div>
 
     <script src="./quadToCubic.js" type="module" defer></script>    
     <script src="./cubicAtEndQuad.js" type="module" defer></script>   
     <script src="./quadAtEndCubic.js" type="module" defer></script>  
     <script src="./cubicBetween2Cubics.js" type="module" defer></script>  
     <script src="./decastlejau.js" type="module" defer></script>
+    <script src="./cardToBez.js" type="module" defer></script>
+    <script src="./bezToCard.js" type="module" defer></script>
 			
 		</div>
 	</article>

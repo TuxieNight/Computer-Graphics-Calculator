@@ -13,6 +13,7 @@ let qAtCEnd4y = document.getElementById("qAtCEnd4y");
 
 // get scale
 let qAtCEndScale = document.getElementById("qAtCEndScale");
+let isFraction = document.getElementById("qAtCEndFraction");
 
 // get the output element
 let qAtCEndResult1x = document.getElementById("qAtCEndResult1x");
@@ -25,10 +26,10 @@ let convert = document.getElementById("qAtCEnd");
 
 convert.onclick = function() {
     // calculate the cubic control points
-    decastlejau();
+    quadAtEndCubic();
 }
 
-function decastlejau() {
+function quadAtEndCubic() {
     // get the quadratic control points
     let c0x = parseFloat(qAtCEnd1x.value);
     let c0y = parseFloat(qAtCEnd1y.value);
@@ -42,7 +43,13 @@ function decastlejau() {
     let c3x = parseFloat(qAtCEnd4x.value);
     let c3y = parseFloat(qAtCEnd4y.value);
 
-    let scale = parseFraction(qAtCEndScale.value);
+    let scale;
+    if (isFraction.checked) {
+        scale = parseFraction(qAtCEndScale.value);
+    }
+    else {
+        scale = parseFloat(qAtCEndScale.value);
+    }
 
     // calculate the cubic control points
     let q0x = c3x;
