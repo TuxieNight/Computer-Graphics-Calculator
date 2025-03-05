@@ -1,12 +1,12 @@
 // get tangent of beginning point
-let dx = parseFloat(document.getElementById("arcTan_dx").value);
-let dy = parseFloat(document.getElementById("arcTan_dy").value);
+let arcTan_dx = document.getElementById("arcTan_dx");
+let arcTan_dy = document.getElementById("arcTan_dy");
 
 // get b2 and b3
-let b2x = parseFloat(document.getElementById("arcTan_b2x").value);
-let b2y = parseFloat(document.getElementById("arcTan_b2y").value);
-let b3x = parseFloat(document.getElementById("arcTan_b3x").value);
-let b3y = parseFloat(document.getElementById("arcTan_b3y").value);
+let arcTan_b2x = document.getElementById("arcTan_b2x");
+let arcTan_b2y = document.getElementById("arcTan_b2y");
+let arcTan_b3x = document.getElementById("arcTan_b3x");
+let arcTan_b3y = document.getElementById("arcTan_b3y");
 
 // get the output elements
 let result_dx = document.getElementById("arcTanResult_dx");
@@ -21,6 +21,15 @@ convert.onclick = function() {
 }
 
 function arcTan() {
+    // get the values
+    let dx = parseFloat(arcTan_dx.value);
+    let dy = parseFloat(arcTan_dy.value);
+    let b2x = parseFloat(arcTan_b2x.value);
+    let b2y = parseFloat(arcTan_b2y.value);
+    let b3x = parseFloat(arcTan_b3x.value);
+    let b3y = parseFloat(arcTan_b3y.value);
+
+
     // calculate the magnitude of the beginning point tangent
     let magBeg = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
 
