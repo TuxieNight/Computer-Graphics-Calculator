@@ -358,6 +358,37 @@
 
 </div>
 
+</div>
+    <h2>Connecting Quadratic Bezier to End of Quadratic Bezier</h2>
+    Quadratic Points: (you do not need p0)
+    <br>
+    <input type="text" id="qAtQEnd1x" name="quadraticBezier" placeholder="p0's x">
+    <input type="text" id="qAtQEnd1y" name="quadraticBezier" placeholder="p0's y">
+    <br>
+    <input type="text" id="qAtQEnd2x" name="quadraticBezier" placeholder="p1's x">
+    <input type="text" id="qAtQEnd2y" name="quadraticBezier" placeholder="p1's y">
+    <br>
+    <input type="text" id="qAtQEnd3x" name="quadraticBezier" placeholder="p2's x">
+    <input type="text" id="qAtQEnd3y" name="quadraticBezier" placeholder="p2's y">
+    <br>
+    C(1) connection is 1, G(1) is any:
+    <input type="text" id="qAtQEndScale" value = "1" placeholder="3/2">
+    <br>
+    scale is fraction:<input type="checkbox" id="qAtQEndFraction" name="qAtQEndFraction">
+    <br>
+    <button id="qAtQEnd">Convert</button>
+    <br><br>
+    Resulting Quadratic Points:
+    <br>
+    <input type="text" id="qAtQEndResult1x" placeholder="q0's x" readonly>
+    <input type="text" id="qAtQEndResult1y" placeholder="q0's y" readonly>
+    <br>
+    <input type="text" id="qAtQEndResult2x" placeholder="q1's x"  readonly>
+    <input type="text" id="qAtQEndResult2y" placeholder="q1's y" readonly>
+    <br>
+    q2 does not matter
+<div>
+
 <div>
     <h2>Connecting Cubic Bezier Between 2 Cubic Beziers with C(1)</h2>
     First Cubic Points: (you do not need a0 or a1)
@@ -532,7 +563,6 @@
 
 <div>
 
-
 </div>
     <h2>Bezier with Arc-Length Parameterization</h2>
     <input type="text" id="arcLength1x" placeholder="b0's x">
@@ -557,11 +587,7 @@
 <div>
 
 </div>
-    <h2>Connecting Cubic to end of cubic, quadratic to end of quadratic (TODO)</h2>
-<div>
-
-</div>
-    <h2>Matrix Multiplication</h2>
+    <h2>Matrix-Point Multiplication</h2>
     <div class = "side-by-side">
     <div style="flex: 2;">
         Matrix:
@@ -608,6 +634,60 @@
     </div>
 
 <div>
+
+</div>
+    <h2>Matrix-Matrix Multiplication</h2>
+    <div class = "side-by-side">
+    <div style="flex: 2;">
+        Left Matrix:
+        <br>
+        <input type="text" id="matrix1st_1" placeholder="a" style = "width: 50px;">
+        <input type="text" id="matrix1st_2" placeholder="c" style = "width: 50px;">
+        <input type="text" id="matrix1st_3" placeholder="e" style = "width: 50px;">
+        <br>
+        <input type="text" id="matrix1st_4" placeholder="b" style = "width: 50px;">
+        <input type="text" id="matrix1st_5" placeholder="d" style = "width: 50px;">
+        <input type="text" id="matrix1st_6" placeholder="f" style = "width: 50px;">
+        <br>
+        <input type="text" id="matrix1st_7" value="0" style = "width: 50px;">
+        <input type="text" id="matrix1st_8" value="0" style = "width: 50px;">
+        <input type="text" id="matrix1st_9" value="1" style = "width: 50px;">
+    </div>
+    <div style="flex: 5;">
+        Right Matrix:
+        <br>
+        <input type="text" id="matrix2nd_1" placeholder="a" style = "width: 50px;">
+        <input type="text" id="matrix2nd_2" placeholder="c" style = "width: 50px;">
+        <input type="text" id="matrix2nd_3" placeholder="e" style = "width: 50px;">
+        <br>
+        <input type="text" id="matrix2nd_4" placeholder="b" style = "width: 50px;">
+        <input type="text" id="matrix2nd_5" placeholder="d" style = "width: 50px;">
+        <input type="text" id="matrix2nd_6" placeholder="f" style = "width: 50px;">
+        <br>
+        <input type="text" id="matrix2nd_7" value="0" style = "width: 50px;">
+        <input type="text" id="matrix2nd_8" value="0" style = "width: 50px;">
+        <input type="text" id="matrix2nd_9" value="1" style = "width: 50px;">
+    </div>
+    </div>
+    <button id="matrixMatrixButton">Get Result</button>
+    <div>
+        
+    </div>
+        <br>
+        Resulting Matrix:
+        <br>
+        <input type="text" id="resultMatrix1" placeholder="a"  readonly>
+        <input type="text" id="resultMatrix2" placeholder="c"  readonly>
+        <input type="text" id="resultMatrix3" placeholder="e"  readonly>
+        <br>
+        <input type="text" id="resultMatrix4" placeholder="b"  readonly>
+        <input type="text" id="resultMatrix5" placeholder="d"  readonly>
+        <input type="text" id="resultMatrix6" placeholder="f"  readonly>
+        <br>
+        <input type="text" id="resultMatrix7" placeholder="0"  readonly>
+        <input type="text" id="resultMatrix8" placeholder="0"  readonly>
+        <input type="text" id="resultMatrix9" placeholder="1"  readonly>
+    <div>
 
 </div>
     <h2>Transforming a Point</h2>
@@ -730,6 +810,7 @@
     <script src="./quadToCubic.js" type="module" defer></script>    
     <script src="./cubicAtEndQuad.js" type="module" defer></script>   
     <script src="./quadAtEndCubic.js" type="module" defer></script>  
+    <script src="./quadAtEndQuad.js" type="module" defer></script>
     <script src="./cubicBetween2Cubics.js" type="module" defer></script>  
     <script src="./quadBetween2Cubics.js" type="module" defer></script>  
     <script src="./decastlejau.js" type="module" defer></script>
@@ -741,6 +822,7 @@
     <script src="./hermToBez.js" type="module" defer></script>
     <script src="./bezToHerm.js" type="module" defer></script>
     <script src="./matrixMultiplication.js" type="module" defer></script>
+    <script src="./matrixMatrixMultiplication.js" type="module" defer></script>
     <script src="./transfPoint.js" type="module" defer></script>
 
     <script src="./arcLengthBez.js" type="module" defer></script>
