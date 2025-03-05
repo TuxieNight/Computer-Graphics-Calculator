@@ -34,10 +34,25 @@ convert.onclick = function() {
 }
 
 function matrixMult() {
-    // multiply top row of matrix
-    let x = m1_1.value * p1x.value + m1_2.value * p1y.value + m1_3.value * p1w.value;
-    let y = m2_1.value * p1x.value + m2_2.value * p1y.value + m2_3.value * p1w.value;
-    let w = m3_1.value * p1x.value + m3_2.value * p1y.value + m3_3.value * p1w.value;
+    // Convert input values to numbers
+    let m11 = parseFloat(m1_1.value);
+    let m12 = parseFloat(m1_2.value);
+    let m13 = parseFloat(m1_3.value);
+    let m21 = parseFloat(m2_1.value);
+    let m22 = parseFloat(m2_2.value);
+    let m23 = parseFloat(m2_3.value);
+    let m31 = parseFloat(m3_1.value);
+    let m32 = parseFloat(m3_2.value);
+    let m33 = parseFloat(m3_3.value);
+
+    let p1xValue = parseFloat(p1x.value);
+    let p1yValue = parseFloat(p1y.value);
+    let p1wValue = parseFloat(p1w.value);
+
+    // Multiply top row of matrix
+    let x = m11 * p1xValue + m12 * p1yValue + m13 * p1wValue;
+    let y = m21 * p1xValue + m22 * p1yValue + m23 * p1wValue;
+    let w = m31 * p1xValue + m32 * p1yValue + m33 * p1wValue;
 
     // output the result [x,y,w]
     resultPoint1.value = x;
