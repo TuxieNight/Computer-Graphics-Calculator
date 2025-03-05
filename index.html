@@ -587,6 +587,27 @@
 <div>
 
 </div>
+    <h2>Arc-Length Tangent (Given beginning tangent, what is ending tangent?)</h2>
+    Tangent at Beginning:
+    <input type="text" id="arcTan_dx" placeholder="b0's dx">
+    <input type="text" id="arcTan_dy" placeholder="b0's dy">
+    <br>
+    Second to Last and Last Point: (do not need b0 or b1)
+    <br>
+    <input type="text" id="arcTan_b2x" placeholder="b2's x">
+    <input type="text" id="arcTan_b2y" placeholder="b2's y">
+    <br>
+    <input type="text" id="arcTan_b3x" placeholder="b3's x">
+    <input type="text" id="arcTan_b3y" placeholder="b3's y">
+    <br>
+    <button id="arcTanConvert">Get Tangent</button>
+    <br>
+    <input type="text" id="arcTanResult_dx" placeholder="dx of end point b3"  readonly>
+    <input type="text" id="arcTanResult_dy" placeholder="dy of end point b3"  readonly>
+    <br>
+<div>
+
+</div>
     <h2>Matrix-Point Multiplication</h2>
     <div class = "side-by-side">
     <div style="flex: 2;">
@@ -824,7 +845,7 @@
     <script src="./matrixMultiplication.js" type="module" defer></script>
     <script src="./matrixMatrixMultiplication.js" type="module" defer></script>
     <script src="./transfPoint.js" type="module" defer></script>
-
+    <script src="./arcTan.js" type="module" defer></script>
     <script src="./arcLengthBez.js" type="module" defer></script>
 			
 		</div>
