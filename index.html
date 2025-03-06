@@ -546,6 +546,29 @@
     <div id = "howDoneY"></div>
 
 </div>
+    <h2>Interpolating Many Line Segments</h2>
+    Number of Points:
+    <br>
+    <input type="text" id="numInterpolatingPoints">
+    <br>
+    Points Loop:
+    <input type="checkbox" id="interpolatingLoop">
+    <br>
+    u = <input type="text" id="interpolatingU" placeholder="u">
+    <br><br>
+    <div id = "interpolatingPoints">
+        Points:
+    </div>
+    <br>
+
+    <button id="interpolateButton">Get Point</button>
+    <br><br>
+    <input type="text" id="interpolatingResultX" placeholder="x"  readonly>
+    <input type="text" id="interpolatingResultY" placeholder="y"  readonly>
+    <br>
+<div>
+
+</div>
 
 <div>
     <h2>Distance</h2>
@@ -847,6 +870,7 @@
     <script src="./transfPoint.js" type="module" defer></script>
     <script src="./arcTan.js" type="module" defer></script>
     <script src="./arcLengthBez.js" type="module" defer></script>
+    <script src="./interpolateLineSegs.js" type="module" defer></script>
 			
 		</div>
 	</article>
