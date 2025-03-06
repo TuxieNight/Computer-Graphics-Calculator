@@ -711,7 +711,8 @@
     <div>
 
 </div>
-    <h2>Transforming a Point</h2>
+
+<h2>Transforming a Point</h2>
 
     If you don't want to use a matrix, let it stay as translate(0,0).
     <br>
@@ -723,6 +724,10 @@
     If you use rotation, use the first box for the angle! Use DEGREES!
 
     <br>
+
+<div class="side-by-side">
+    
+    <div>
 
     <button id="transformButton">Convert</button>
 
@@ -820,13 +825,219 @@
     <br>
 
     Point(x,y):
-    <input type="text" id="px" placeholder="x" value = 0>
-    <input type="text" id="py" placeholder="y" value = 0>
+    <input type="text" id="px" placeholder="x" value = 0 size="10">
+    <input type="text" id="py" placeholder="y" value = 0 size="10">
     <br>
     Result(x,y):
-    <input type="text" id="resultPx" placeholder="x"  readonly>
-    <input type="text" id="resultPy" placeholder="y"  readonly>
+    <input type="text" id="resultPx" placeholder="x"  readonly size="10">
+    <input type="text" id="resultPy" placeholder="y"  readonly size="10">
+    </div>
+    <div>
+    
+        <button id="lransformButton">Convert</button>
+    
+        <br>
+    
+        <select id = "l1">
+            <option value="T">T</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+        </select>
+        <input type="text" id="l1x" placeholder="x" value = 0>
+        <input type="text" id="l1y" placeholder="y" value = 0>
+    
+        <br>
+    
+        <select id = "l2">
+            <option value="T">T</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+        </select>
+        <input type="text" id="l2x" placeholder="x" value = 0>
+        <input type="text" id="l2y" placeholder="y" value = 0>
+        <br>
+    
+        <select id = "l3">
+            <option value="T">T</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+        </select>
+        <input type="text" id="l3x" placeholder="x" value = 0>
+        <input type="text" id="l3y" placeholder="y" value = 0>
+        <br>
+    
+        <select id = "l4">
+            <option value="T">T</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+        </select>
+        <input type="text" id="l4x" placeholder="x" value = 0>
+        <input type="text" id="l4y" placeholder="y" value = 0>
+        <br>
+    
+        <select id = "l5">
+            <option value="T">T</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+        </select>
+        <input type="text" id="l5x" placeholder="x" value = 0>
+        <input type="text" id="l5y" placeholder="y" value = 0>
+        <br>
+    
+        <select id = "l6">
+            <option value="T">T</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+        </select>
+        <input type="text" id="l6x" placeholder="x" value = 0>
+        <input type="text" id="l6y" placeholder="y" value = 0>
+        <br>
+    
+        <select id = "l7">
+            <option value="T">T</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+        </select>
+        <input type="text" id="l7x" placeholder="x" value = 0>
+        <input type="text" id="l7y" placeholder="y" value = 0>
+        <br>
+    
+        <select id = "l8">
+            <option value="T">T</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+        </select>
+        <input type="text" id="l8x" placeholder="x" value = 0>
+        <input type="text" id="l8y" placeholder="y" value = 0>
+        <br>
+        
+        <select id = "l9">
+            <option value="T">T</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+        </select>
+        <input type="text" id="l9x" placeholder="x" value = 0>
+        <input type="text" id="l9y" placeholder="y" value = 0>
+        <br>
+        
+        <select id = "l10">
+            <option value="T">T</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+        </select>
+        <input type="text" id="l10x" placeholder="x" value = 0>
+        <input type="text" id="l10y" placeholder="y" value = 0>
+        <br>
+    
+        Point(x,y):
+        <input type="text" id="lpx" placeholder="x" value = 0 size="10">
+        <input type="text" id="lpy" placeholder="y" value = 0 size="10">
+        <br>
+        Result(x,y):
+        <input type="text" id="lresultPx" placeholder="x"  readonly size="10">
+        <input type="text" id="lresultPy" placeholder="y"  readonly size="10">
+        </div>
 </div>
+
+<div>
+    
+    <h2>Find Arc Length Around Simple Perimeter</h2>
+    Add points to the shape by switching from option N to option P and adding the x and y values.
+    <br>
+
+    <button id="ptButton">Find</button>
+
+    <br>
+
+    <select id = "a1">
+        <option value="N">N</option>
+        <option value="P">P</option>
+    </select>
+    <input type="text" id="a1x" placeholder="x" value = 0>
+    <input type="text" id="a1y" placeholder="y" value = 0>
+
+    <br>
+
+    <select id = "a2">
+        <option value="N">N</option>
+        <option value="P">P</option>
+    </select>
+    <input type="text" id="a2x" placeholder="x" value = 0>
+    <input type="text" id="a2y" placeholder="y" value = 0>
+    <br>
+
+    <select id = "a3">
+        <option value="N">N</option>
+        <option value="P">P</option>
+    </select>
+    <input type="text" id="a3x" placeholder="x" value = 0>
+    <input type="text" id="a3y" placeholder="y" value = 0>
+    <br>
+
+    <select id = "a4">
+        <option value="N">N</option>
+        <option value="P">P</option>
+    </select>
+    <input type="text" id="a4x" placeholder="x" value = 0>
+    <input type="text" id="a4y" placeholder="y" value = 0>
+    <br>
+
+    <select id = "a5">
+        <option value="N">N</option>
+        <option value="P">P</option>
+    </select>
+    <input type="text" id="a5x" placeholder="x" value = 0>
+    <input type="text" id="a5y" placeholder="y" value = 0>
+    <br>
+
+    <select id = "a6">
+        <option value="N">N</option>
+        <option value="P">P</option>
+    </select>
+    <input type="text" id="a6x" placeholder="x" value = 0>
+    <input type="text" id="a6y" placeholder="y" value = 0>
+    <br>
+
+    <select id = "a7">
+        <option value="N">N</option>
+        <option value="P">P</option>
+    </select>
+    <input type="text" id="a7x" placeholder="x" value = 0>
+    <input type="text" id="a7y" placeholder="y" value = 0>
+    <br>
+
+    <select id = "a8">
+        <option value="N">N</option>
+        <option value="P">P</option>
+    </select>
+    <input type="text" id="a8x" placeholder="x" value = 0>
+    <input type="text" id="a8y" placeholder="y" value = 0>
+    <br>
+    
+    <select id = "a9">
+        <option value="N">N</option>
+        <option value="P">P</option>
+    </select>
+    <input type="text" id="a9x" placeholder="x" value = 0>
+    <input type="text" id="a9y" placeholder="y" value = 0>
+    <br>
+    
+    <select id = "a10">
+        <option value="N">N</option>
+        <option value="P">P</option>
+    </select>
+    <input type="text" id="a10x" placeholder="x" value = 0>
+    <input type="text" id="a10y" placeholder="y" value = 0>
+    <br>
+
+    u: <input type="text" id="aU" placeholder="u" value = 0.5>
+    perimeter: <input type="text" id="aPerimeter" placeholder="perimeter"  readonly>
+    lengths: <input type="text" id="aDistances" placeholder="lengths"  readonly>
+    <br>
+    Result(x,y):
+    <input type="text" id="aresultPx" placeholder="x"  readonly size="10">
+    <input type="text" id="aresultPy" placeholder="y"  readonly size="10">
+    </div>
 
     <script src="./quadToCubic.js" type="module" defer></script>    
     <script src="./cubicAtEndQuad.js" type="module" defer></script>   
@@ -845,8 +1056,10 @@
     <script src="./matrixMultiplication.js" type="module" defer></script>
     <script src="./matrixMatrixMultiplication.js" type="module" defer></script>
     <script src="./transfPoint.js" type="module" defer></script>
+    <script src="./lransfPoint.js" type="module" defer></script>
     <script src="./arcTan.js" type="module" defer></script>
     <script src="./arcLengthBez.js" type="module" defer></script>
+    <script src="./shapeU.js" type="module" defer></script>
 			
 		</div>
 	</article>
