@@ -32,17 +32,25 @@ convert.onclick = function() {
 function hermToBez() {
 
     // get the hermite control points
-    let h0x = parseFloat(hToB1x.value) | 0;
-    let h0y = parseFloat(hToB1y.value) | 0;
+    let h0x = parseFloat(hToB1x.value);
+    if (isNaN(h0x)) h0x = 0;
+    let h0y = parseFloat(hToB1y.value);
+    if (isNaN(h0y)) h0y = 0;
 
-    let h1x = parseFloat(hToB2x.value) | 0;
-    let h1y = parseFloat(hToB2y.value) | 0; 
+    let h1x = parseFloat(hToB2x.value);
+    if (isNaN(h1x)) h1x = 0;
+    let h1y = parseFloat(hToB2y.value);
+    if (isNaN(h1y)) h1y = 0; 
 
-    let h2x = parseFloat(hToB3x.value) | 0; // derivative of h0x
-    let h2y = parseFloat(hToB3y.value) | 0; // derivative of h0y
+    let h2x = parseFloat(hToB3x.value); // derivative of h0x
+    if (isNaN(h2x)) h2x = 0;
+    let h2y = parseFloat(hToB3y.value); // derivative of h0y
+    if (isNaN(h2y)) h2y = 0;
 
-    let h3x = parseFloat(hToB4x.value) | 0; // derivative of h1x
-    let h3y = parseFloat(hToB4y.value) | 0; // derivative of h1y
+    let h3x = parseFloat(hToB4x.value); // derivative of h1x
+    if (isNaN(h3x)) h3x = 0;
+    let h3y = parseFloat(hToB4y.value); // derivative of h1y
+    if (isNaN(h3y)) h3y = 0;
 
     // calculate the bezier control points
     let b0x = h0x;

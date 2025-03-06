@@ -17,11 +17,15 @@ convert.onclick = function() {
 
 function distance() {
     // get the distance controls
-    let x1Val = parseFloat(x1.value) | 0;
-    let x2Val = parseFloat(x2.value) | 0;
+    let x1Val = parseFloat(x1.value);
+    let x2Val = parseFloat(x2.value);
+    let y1Val = parseFloat(y1.value);
+    let y2Val = parseFloat(y2.value);
 
-    let y1Val = parseFloat(y1.value) | 0;
-    let y2Val = parseFloat(y2.value) | 0;
+    if (isNaN(x1Val)) x1Val = 0;
+    if (isNaN(x2Val)) x2Val = 0;
+    if (isNaN(y1Val)) y1Val = 0;
+    if (isNaN(y2Val)) y2Val = 0;
 
     // compute and display the distance result
     dist.value = Math.sqrt(Math.pow(x2Val - x1Val, 2) + Math.pow(y2Val - y1Val, 2));
