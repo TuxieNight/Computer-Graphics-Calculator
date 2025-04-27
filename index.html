@@ -33,15 +33,14 @@
 
 <h1 style = "color:blue">3D Calculator</h1>
 <div>
-    <h2>Barycentric Interpolation</h2>
+    <h2>Barycentric Interpolation (Accepts Fractions or Decimals)</h2>
     Number of Values to Interpolate (2 for uv, 3 for color, etc.):
     <br>
     <input type="text" id="barycentricNum">
-    <br>
-    Is Fraction:
-    <input type="checkbox" id="barycentricFraction">
     <br><br>
     <b>Values Known for All Points</b>
+    <br>
+    <i>Note: if you know alpha, beta, and gamma already, put them in the interpolated point section and set the first vertex to [1, 0, 0], the second to [0, 1, 0], and the third to [0, 0, 1].</i>
     <br>
     Vertex 1:
     <input type="text" id="v1_knownX" placeholder="1">
@@ -75,7 +74,7 @@
     <br>
 
     <button id="interpolateBarycentric">Get Point</button>
-    
+
     <div id = "v_unknown"></div>
 </div>
 
@@ -1134,6 +1133,7 @@
     <script src="./arcLengthBez.js" type="module" defer></script>
     <script src="./shapeU.js" type="module" defer></script>
     <script src="./interpolateLineSegs.js" type="module" defer></script>
+    <script src="./barycentricInterpolation.js" type="module" defer></script>
 			
 		</div>
 	</article>
