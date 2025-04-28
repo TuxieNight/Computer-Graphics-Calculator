@@ -31,6 +31,68 @@
         
 		<div class="content post__content clearfix">
 
+            <h1 style = "color:blue">3D Calculator</h1>
+<div>
+    <h2>Barycentric Interpolation (Accepts Fractions or Decimals)</h2>
+    Number of Values to Interpolate (2 for uv, 3 for color, etc.):
+    <br>
+    <input type="text" id="barycentricNum">
+    <br><br>
+    <b>Values Known for All Points</b>
+    <br>
+    <i>Note: if you know alpha, beta, and gamma already, put them in the interpolated point section and set the first vertex to [1, 0, 0], the second to [0, 1, 0], and the third to [0, 0, 1].</i>
+    <br>
+    Vertex 1:
+    <input type="text" id="v1_knownX" placeholder="1">
+    <input type="text" id="v1_knownY" placeholder="0">
+    <input type="text" id="v1_knownZ" placeholder="0">
+    <br>
+    Vertex 2:
+    <input type="text" id="v2_knownX" placeholder="0">
+    <input type="text" id="v2_knownY" placeholder="1">
+    <input type="text" id="v2_knownZ" placeholder="0">
+    <br>
+    Vertex 3:
+    <input type="text" id="v3_knownX" placeholder="0">
+    <input type="text" id="v3_knownY" placeholder="0">
+    <input type="text" id="v3_knownZ" placeholder="1">
+    <br>
+    Interpolated Point:
+    <input type="text" id="v_knownX" placeholder="0">
+    <input type="text" id="v_knownY" placeholder="0">
+    <input type="text" id="v_knownZ" placeholder="1">
+    <br>
+    <br><br>
+    <b>Values Known Only for Vertices</b>
+    <br>
+    Vertex 1:
+    <div id = "v1_unknown"></div>
+    Vertex 2:
+    <div id = "v2_unknown"></div>
+    Vertex 3:
+    <div id = "v3_unknown"></div>
+    <br>
+
+    <button id="interpolateBarycentric">Get Point</button>
+
+    <div id = "v_unknown"></div>
+</div>
+
+<div>
+    <h2>Vector Normalization (Accepts Fractions or Decimals)</h2>
+    Size of Vector:
+    <br>
+    <input type="text" id="vecSize">
+    <br><br>
+    Vector:
+    <div id = "vecToNormalize"></div>
+    <br>
+
+    <button id="normalizeVector">Get Vector</button>
+
+    <div id = "normalizedVec"></div>
+</div>
+
             <h2>Transforming a Point in 3D</h2>
 
             If you don't want to use a matrix, let it stay as translate(0,0,0), enlarge(1,1,1), or scale(1,1,1).
@@ -307,6 +369,7 @@
                 </div>
 </div>            
 
+<h1 style = "color:blue">2D Calculator</h1>
 <div class="side-by-side">
     <div>
         <h2>Convert Cardinal to Cubic Bezier</h2>
@@ -1361,6 +1424,8 @@
     <script src="./arcLengthBez.js" type="module" defer></script>
     <script src="./shapeU.js" type="module" defer></script>
     <script src="./interpolateLineSegs.js" type="module" defer></script>
+    <script src="./barycentricInterpolation.js" type="module" defer></script>
+    <script src="./normalizeVector.js" type="module" defer></script>
 			
 		</div>
 	</article>
