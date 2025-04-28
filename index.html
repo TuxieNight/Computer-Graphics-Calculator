@@ -93,6 +93,30 @@
     <div id = "normalizedVec"></div>
 </div>
 
+<div>
+    <h2>Curve with Basis Functions & Control Points (Accepts Fractions or Decimals)</h2>
+    Number of Basis Functions & Control Points:
+    <br>
+    <input type="text" id="numBasisFunctions">
+    <br>
+    Size of Control Point Vectors:
+    <br>
+    <input type="text" id="basisVecSize">
+    <br><br>
+    u: <input type="text" id="basisUvalue" placeholder="0.5">
+    <br><br>
+    Basis Functions:
+    <div id = "basisFunctions"></div>
+    <br>
+    Control Points:
+    <div id = "basisControlPoints"></div>
+    <br>
+
+    <button id="getBasisUvalue">Get U</button>
+
+    
+</div>
+
 <h1 style = "color:blue">2D Calculator</h1>
 <div class="side-by-side">
     <div>
@@ -1149,7 +1173,9 @@
     <script src="./interpolateLineSegs.js" type="module" defer></script>
     <script src="./barycentricInterpolation.js" type="module" defer></script>
     <script src="./normalizeVector.js" type="module" defer></script>
-			
+    <script src="./computeBasisFunction.js" type="module" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>	
+    
 		</div>
 	</article>
 </main>
