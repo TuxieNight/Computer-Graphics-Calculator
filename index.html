@@ -97,11 +97,11 @@
     <h2>Curve with Basis Functions & Control Points (Accepts Fractions or Decimals)</h2>
     Number of Basis Functions & Control Points:
     <br>
-    <input type="text" id="numBasisFunctions">
+    <input type="text" id="numBasisFunctions" value = "3">
     <br>
     Size of Control Point Vectors:
     <br>
-    <input type="text" id="basisVecSize">
+    <input type="text" id="basisVecSize" value = "3">
     <br><br>
     u: <input type="text" id="basisUvalue" placeholder="0.5">
     <br><br>
@@ -109,10 +109,15 @@
     <div id = "basisFunctions"></div>
     <br>
     Control Points:
-    <div id = "basisControlPoints"></div>
+    <div id = "basisControlPoints" class = "side-by-side"></div>
     <br>
 
-    <button id="getBasisUvalue">Get U</button>
+    <button id="getBasisUvalue">Get Point</button>
+    <br><br>
+    Point:
+    <div id = "basisPointResults"></div>
+    <br>
+    <div id = "basisFunctionResults"></div>
 
     
 </div>
