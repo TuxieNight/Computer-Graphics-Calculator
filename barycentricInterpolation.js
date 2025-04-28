@@ -142,7 +142,7 @@ function updatePoints() {
 
     // create the points for each divider
     for (let i = 0; i < numPoints; i++) {
-        // create the x and y input elements
+        // create the input elements
         let v1_ele = document.createElement("input");
         let v2_ele = document.createElement("input");
         let v3_ele = document.createElement("input");
