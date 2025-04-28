@@ -31,7 +31,7 @@
         
 		<div class="content post__content clearfix">
 
-<h1 style = "color:blue">3D Calculator</h1>
+            <h1 style = "color:blue">3D Calculator</h1>
 <div>
     <h2>Barycentric Interpolation (Accepts Fractions or Decimals)</h2>
     Number of Values to Interpolate (2 for uv, 3 for color, etc.):
@@ -116,6 +116,282 @@
 
     
 </div>
+
+            <h2>Transforming a Point in 3D</h2>
+
+            If you don't want to use a matrix, let it stay as translate(0,0,0), enlarge(1,1,1), or scale(1,1,1).
+
+            <br>
+
+            Remember that the rotation is in DEGREES, not radians, and is LOCAL NOT GLOBAL. BROKEN: does not work after axes are changed
+
+            <br>
+
+            Enlarge and scale both affect future transformations, but the scale from THREE does not.
+
+            <br>
+        
+            T: translation &ensp; R: (Euler) rotation &ensp;  E: enlarge (from LOCAL center) &ensp; S: scale (from GLOBAL center)
+   
+            <br>
+        
+        <div class="side-by-side">
+            
+            <div>
+        
+            <button id="3dtransformButton">Convert</button>
+        
+            <br>
+        
+            <select id = "3dt1">
+                <option value="T">T</option>
+                <option value="R">R</option>
+                <option value="E">E</option>
+                <option value="S">S</option>
+            </select>
+            <input type="text" id="3dt1x" placeholder="x" value = 0 size = 12>
+            <input type="text" id="3dt1y" placeholder="y" value = 0 size = 12>
+            <input type="text" id="3dt1z" placeholder="z" value = 0 size = 12>
+        
+            <br>
+        
+            <select id="3dt2">
+                <option value="T">T</option>
+                <option value="R">R</option>
+                <option value="E">E</option>
+                <option value="S">S</option>
+            </select>
+            <input type="text" id="3dt2x" placeholder="x" value = 0 size = 12>
+            <input type="text" id="3dt2y" placeholder="y" value = 0 size = 12>
+            <input type="text" id="3dt2z" placeholder="z" value = 0 size = 12>
+            <br>
+        
+            <select id="3dt3">
+                <option value="T">T</option>
+                <option value="R">R</option>
+                <option value="E">E</option>
+                <option value="S">S</option>
+            </select>
+            <input type="text" id="3dt3x" placeholder="x" value = 0 size = 12>
+            <input type="text" id="3dt3y" placeholder="y" value = 0 size = 12>
+            <input type="text" id="3dt3z" placeholder="z" value = 0 size = 12>
+            <br>
+        
+            <select id="3dt4">
+                <option value="T">T</option>
+                <option value="R">R</option>
+                <option value="E">E</option>
+                <option value="S">S</option>
+            </select>
+            <input type="text" id="3dt4x" placeholder="x" value = 0 size = 12>
+            <input type="text" id="3dt4y" placeholder="y" value = 0 size = 12>
+            <input type="text" id="3dt4z" placeholder="z" value = 0 size = 12>
+            <br>
+        
+            <select id="3dt5">
+                <option value="T">T</option>
+                <option value="R">R</option>
+                <option value="E">E</option>
+                <option value="S">S</option>
+            </select>
+            <input type="text" id="3dt5x" placeholder="x" value = 0 size = 12>
+            <input type="text" id="3dt5y" placeholder="y" value = 0 size = 12>
+            <input type="text" id="3dt5z" placeholder="z" value = 0 size = 12>
+            <br>
+        
+            <select id="3dt6">
+                <option value="T">T</option>
+                <option value="R">R</option>
+                <option value="E">E</option>
+                <option value="S">S</option>
+            </select>
+            <input type="text" id="3dt6x" placeholder="x" value = 0 size = 12>
+            <input type="text" id="3dt6y" placeholder="y" value = 0 size = 12>
+            <input type="text" id="3dt6z" placeholder="z" value = 0 size = 12>
+            <br>
+        
+            <select id="3dt7">
+                <option value="T">T</option>
+                <option value="R">R</option>
+                <option value="E">E</option>
+                <option value="S">S</option>
+            </select>
+            <input type="text" id="3dt7x" placeholder="x" value = 0 size = 12>
+            <input type="text" id="3dt7y" placeholder="y" value = 0 size = 12>
+            <input type="text" id="3dt7z" placeholder="z" value = 0 size = 12>
+            <br>
+        
+            <select id="3dt8">
+                <option value="T">T</option>
+                <option value="R">R</option>
+                <option value="E">E</option>
+                <option value="S">S</option>
+            </select>
+            <input type="text" id="3dt8x" placeholder="x" value = 0 size = 12>
+            <input type="text" id="3dt8y" placeholder="y" value = 0 size = 12>
+            <input type="text" id="3dt8z" placeholder="z" value = 0 size = 12>
+            <br>
+        
+            <select id="3dt9">
+                <option value="T">T</option>
+                <option value="R">R</option>
+                <option value="E">E</option>
+                <option value="S">S</option>
+            </select>
+            <input type="text" id="3dt9x" placeholder="x" value = 0 size = 12>
+            <input type="text" id="3dt9y" placeholder="y" value = 0 size = 12>
+            <input type="text" id="3dt9z" placeholder="z" value = 0 size = 12>
+            <br>
+        
+            <select id="3dt10">
+                <option value="T">T</option>
+                <option value="R">R</option>
+                <option value="E">E</option>
+                <option value="S">S</option>
+            </select>
+            <input type="text" id="3dt10x" placeholder="x" value = 0 size = 12>
+            <input type="text" id="3dt10y" placeholder="y" value = 0 size = 12>
+            <input type="text" id="3dt10z" placeholder="z" value = 0 size = 12>
+            <br>
+        
+            Point(x,y,z):
+            <input type="text" id="3dpx" placeholder="x" value = 0 size="9">
+            <input type="text" id="3dpy" placeholder="y" value = 0 size="9">
+            <input type="text" id="3dpz" placeholder="z" value = 0 size="9">
+            <br>
+            Result(x,y,z):
+            <input type="text" id="3dresultPx" placeholder="x"  readonly size="9">
+            <input type="text" id="3dresultPy" placeholder="y"  readonly size="9">
+            <input type="text" id="3dresultPz" placeholder="z"  readonly size="9">
+            </div>
+            <div>
+            
+                <button id="3dLransformButton">Convert</button>
+            
+                <br>
+            
+                <select id="3dL1">
+                    <option value="T">T</option>
+                    <option value="R">R</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                </select>
+                <input type="text" id="3dL1x" placeholder="x" value = 0 size = 12>
+                <input type="text" id="3dL1y" placeholder="y" value = 0 size = 12>
+                <input type="text" id="3dL1z" placeholder="z" value = 0 size = 12>
+            
+                <br>
+            
+                <select id="3dL2">
+                    <option value="T">T</option>
+                    <option value="R">R</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                </select>
+                <input type="text" id="3dL2x" placeholder="x" value = 0 size = 12>
+                <input type="text" id="3dL2y" placeholder="y" value = 0 size = 12>
+                <input type="text" id="3dL2z" placeholder="z" value = 0 size = 12>
+                <br>
+            
+                <select id="3dL3">
+                    <option value="T">T</option>
+                    <option value="R">R</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                </select>
+                <input type="text" id="3dL3x" placeholder="x" value = 0 size = 12>
+                <input type="text" id="3dL3y" placeholder="y" value = 0 size = 12>
+                <input type="text" id="3dL3z" placeholder="z" value = 0 size = 12>
+                <br>
+            
+                <select id="3dL4">
+                    <option value="T">T</option>
+                    <option value="R">R</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                </select>
+                <input type="text" id="3dL4x" placeholder="x" value = 0 size = 12>
+                <input type="text" id="3dL4y" placeholder="y" value = 0 size = 12>
+                <input type="text" id="3dL4z" placeholder="z" value = 0 size = 12>
+                <br>
+            
+                <select id="3dL5">
+                    <option value="T">T</option>
+                    <option value="R">R</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                </select>
+                <input type="text" id="3dL5x" placeholder="x" value = 0 size = 12>
+                <input type="text" id="3dL5y" placeholder="y" value = 0 size = 12>
+                <input type="text" id="3dL5z" placeholder="z" value = 0 size = 12>
+                <br>
+            
+                <select id="3dL6">
+                    <option value="T">T</option>
+                    <option value="R">R</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                </select>
+                <input type="text" id="3dL6x" placeholder="x" value = 0 size = 12>
+                <input type="text" id="3dL6y" placeholder="y" value = 0 size = 12>
+                <input type="text" id="3dL6z" placeholder="z" value = 0 size = 12>
+                <br>
+            
+                <select id="3dL7">
+                    <option value="T">T</option>
+                    <option value="R">R</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                </select>
+                <input type="text" id="3dL7x" placeholder="x" value = 0 size = 12>
+                <input type="text" id="3dL7y" placeholder="y" value = 0 size = 12>
+                <input type="text" id="3dL7z" placeholder="z" value = 0 size = 12>
+                <br>
+            
+                <select id="3dL8">
+                    <option value="T">T</option>
+                    <option value="R">R</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                </select>
+                <input type="text" id="3dL8x" placeholder="x" value = 0 size = 12>
+                <input type="text" id="3dL8y" placeholder="y" value = 0 size = 12>
+                <input type="text" id="3dL8z" placeholder="z" value = 0 size = 12>
+                <br>
+                
+                <select id="3dL9">
+                    <option value="T">T</option>
+                    <option value="R">R</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                </select>
+                <input type="text" id="3dL9x" placeholder="x" value = 0 size = 12>
+                <input type="text" id="3dL9y" placeholder="y" value = 0 size = 12>
+                <input type="text" id="3dL9z" placeholder="z" value = 0 size = 12>
+                <br>
+                
+                <select id="3dL10">
+                    <option value="T">T</option>
+                    <option value="R">R</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                </select>
+                <input type="text" id="3dL10x" placeholder="x" value = 0 size = 12>
+                <input type="text" id="3dL10y" placeholder="y" value = 0 size = 12>
+                <input type="text" id="3dL10z" placeholder="z" value = 0 size = 12>
+                <br>
+            
+                Point(x,y,z):
+                <input type="text" id="3dLpx" placeholder="x" value = 0 size="9">
+                <input type="text" id="3dLpy" placeholder="y" value = 0 size="9">
+                <input type="text" id="3dLpz" placeholder="z" value = 0 size="9">
+                <br>
+                Result(x,y,z):
+                <input type="text" id="3dLresultPx" placeholder="x"  readonly size="9">
+                <input type="text" id="3dLresultPy" placeholder="y"  readonly size="9">
+                <input type="text" id="3dLresultPz" placeholder="z"  readonly size="9">
+                </div>
+</div>            
 
 <h1 style = "color:blue">2D Calculator</h1>
 <div class="side-by-side">
@@ -1167,6 +1443,7 @@
     <script src="./matrixMatrixMultiplication.js" type="module" defer></script>
     <script src="./transfPoint.js" type="module" defer></script>
     <script src="./lransfPoint.js" type="module" defer></script>
+    <script src="./3DtransfPoint.js" type="module" defer></script>
     <script src="./arcTan.js" type="module" defer></script>
     <script src="./arcLengthBez.js" type="module" defer></script>
     <script src="./shapeU.js" type="module" defer></script>
