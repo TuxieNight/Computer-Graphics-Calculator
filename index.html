@@ -712,6 +712,81 @@ THREE.js converts everything internally to quaternions.
     <input type="text" id="4DmatrixResult_1" value="1" readonly>
 </div>
 
+<div>
+    <h2>4D Matrix-Vector Multiplication</h2>
+    <div class = "side-by-side">
+    <div style="flex: 2;">
+        Left Matrix:
+        <br>
+        <input type="text" id="4Dmatrix_a" placeholder="a" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_d" placeholder="d" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_g" placeholder="g" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_j" placeholder="j" style = "width: 50px;">
+        <br>
+        <input type="text" id="4Dmatrix_b" placeholder="b" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_e" placeholder="e" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_h" placeholder="h" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_k" placeholder="k" style = "width: 50px;">
+        <br>
+        <input type="text" id="4Dmatrix_c" placeholder="c" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_f" placeholder="f" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_i" placeholder="i" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_l" placeholder="l" style = "width: 50px;">
+        <br>
+        <input type="text" id="4Dmatrix_0_1st" value="0" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_0_2nd" value="0" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_0_3rd" value="0" style = "width: 50px;">
+        <input type="text" id="4Dmatrix_1" value="1" style = "width: 50px;">
+    </div>
+
+    <div style="flex: 3;">
+        Vector:
+        <br>
+        <input type="text" id="4Dvector_a" placeholder="x" style = "width: 50px;">
+        <br>
+        <input type="text" id="4Dvector_b" placeholder="y" style = "width: 50px;">
+        <br>
+        <input type="text" id="4Dvector_c" placeholder="z" style = "width: 50px;">
+        <br>
+        <input type="text" id="4Dvector_d" placeholder="w" value="1" style = "width: 50px;">
+    </div>
+    </div>
+    <button id="4DmatrixVectorButton">Get Result</button>
+    <br>
+    Resulting Vector:
+
+    <div class = "side-by-side">
+        <div style="flex: 0.1;">
+            <input type="text" id="4DvecResult_a" placeholder="x" readonly>
+            <br>
+            <input type="text" id="4DvecResult_b" placeholder="y" readonly>
+            <br>
+            <input type="text" id="4DvecResult_c" placeholder="z" readonly>
+            <br>
+            <input type="text" id="4DvecResult_d" placeholder="w" readonly>
+        </div>
+        <div style="flex: 0.5;">
+            OR
+        </div>
+        <div style="flex: 10;">
+            <input type="text" id="4DvecResult_x" placeholder="x" readonly>
+            <br>
+            <input type="text" id="4DvecResult_y" placeholder="y" readonly>
+            <br>
+            <input type="text" id="4DvecResult_z" placeholder="z" readonly>
+        </div>
+        <div style="flex: 20;">
+            OR PROJECTED
+        </div>
+        <div style="flex: 50;">
+            <input type="text" id="4DvecResult_projectedX" placeholder="x" readonly>
+            <br>
+            <input type="text" id="4DvecResult_projectedY" placeholder="y" readonly>
+        </div>
+
+    </div>
+</div>
+
 <h1 style = "color:blue">2D Calculator</h1>
 <div class="side-by-side">
     <div>
@@ -1776,6 +1851,7 @@ THREE.js converts everything internally to quaternions.
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
     <script src="./bezTangents.js"></script>	
     <script src="./4DmatrixMatrixMult.js"></script>
+    <script src="./4DmatrixVectorMult.js"></script>
     
 		</div>
 	</article>
