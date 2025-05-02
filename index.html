@@ -8,6 +8,10 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./css/workbook.css">
+        <!-- Use LATEX -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
         <script src="../../js/resizeIFrames.js"></script>
         <style>
             .side-by-side {
@@ -399,6 +403,10 @@
 </div> 
 
 <h2>Axis Angle</h2>
+<b>Global:</b> rotateOnWorldAxis()
+<br> <b>Local:</b> rotateOnAxis()
+<br> <b>Specify 4 numbers:</b> angle,axisX,axisY,axisZ
+<br> The axis angle method does not suffer from gimbal lock.
 <div class="side-by-side">
     <div>
         <h3>Global</h3>
@@ -450,6 +458,158 @@
         <input type="text" id="axisResultLy" placeholder="y"  readonly size="9">
         <input type="text" id="axisResultLz" placeholder="z"  readonly size="9">
     </div>
+</div>
+
+<h2>Quaternions</h2>
+THREE.js converts everything internally to quaternions.
+<br> <b>Specify 4 numbers:</b> A quaternion is a 4D complex number.
+<br> Quaternions are composed via multiplication.
+<br> Quaternions can be interpolated (spherical linear interpolation)
+<br> Quaternions do not suffer from gimbal lock.
+<div class="side-by-side">
+    <div>
+        <h3>Axis Angle to Quaternion</h3>
+        Axis(x,y,z):
+        <input type="text" id="axisQuatx" placeholder="x" value = 0 size="9">
+        <input type="text" id="axisQuaty" placeholder="y" value = 0 size="9">
+        <input type="text" id="axisQuatz" placeholder="z" value = 0 size="9">
+        <br>
+        Angle (in Degrees):
+        <input type="text" id="axisQuatAngle" placeholder="angle" value = 0 size="9">
+        <br><br>
+        <button id="axisQuatConvert">Convert</button>
+        <br><br>
+        Result:
+        <br> \(cos(\frac{\theta}{2}):\) 
+        <input type="text" id="axisQuatResultAngle" placeholder="w"  readonly size="9">
+        <br> \(x*sin(\frac{\theta}{2}):\) 
+        <input type="text" id="axisQuatResultx" placeholder="x"  readonly size="9">
+        <br> \(y*sin(\frac{\theta}{2}):\) 
+        <input type="text" id="axisQuatResulty" placeholder="y"  readonly size="9">
+        <br> \(z*sin(\frac{\theta}{2}):\) 
+        <input type="text" id="axisQuatResultz" placeholder="z"  readonly size="9">
+    </div>
+
+    <div>
+        <h3>Euler Angle to Quaternion</h3>
+        Angle(x,y,z) (in Degrees):
+        <br>
+        <input type="text" id="eulerQuatx" placeholder="x" value = 0 size="7">
+        <input type="text" id="eulerQuaty" placeholder="y" value = 0 size="7">
+        <input type="text" id="eulerQuatz" placeholder="z" value = 0 size="7">
+        <br>
+        <br>
+        <button id="eulerQuatConvert">Convert</button>
+        <br><br>
+        Result:
+        <br>
+        Intermediate results for each rotation at x, y, z:
+        <br>
+        \( (cos(\frac{x}{2}), sin(\frac{x}{2}), 0, 0 ):\) 
+        <br>
+        <input type="text" id="eulerQuatResultangle1" placeholder="w"  readonly size="9">
+        <input type="text" id="eulerQuatResultx1" placeholder="x"  readonly size="9">
+        <input type="text" id="eulerQuatResulty1" placeholder="y"  readonly size="9">
+        <input type="text" id="eulerQuatResultz1" placeholder="z"  readonly size="9">
+        <br>
+        \( (cos(\frac{y}{2}), 0, sin(\frac{y}{2}), 0 ):\) 
+        <br>
+        <input type="text" id="eulerQuatResultangle2" placeholder="w"  readonly size="9">
+        <input type="text" id="eulerQuatResultx2" placeholder="x"  readonly size="9">
+        <input type="text" id="eulerQuatResulty2" placeholder="y"  readonly size="9">
+        <input type="text" id="eulerQuatResultz2" placeholder="z"  readonly size="9">
+        <br>
+        \( (cos(\frac{z}{2}), 0, 0, sin(\frac{z}{2}) ):\) 
+        <br>
+        <input type="text" id="eulerQuatResultangle3" placeholder="w"  readonly size="9">
+        <input type="text" id="eulerQuatResultx3" placeholder="x"  readonly size="9">
+        <input type="text" id="eulerQuatResulty3" placeholder="y"  readonly size="9">
+        <input type="text" id="eulerQuatResultz3" placeholder="z"  readonly size="9">
+        <br><br>
+        Multiplied Quaternion:
+        <br>
+        <input type="text" id="eulerQuatResultangle" placeholder="w"  readonly size="9">
+        <input type="text" id="eulerQuatResultx" placeholder="x"  readonly size="9">
+        <input type="text" id="eulerQuatResulty" placeholder="y"  readonly size="9">
+        <input type="text" id="eulerQuatResultz" placeholder="z"  readonly size="9">
+        <br>
+
+    </div>
+    
+</div>
+<div class="side-by-side">
+    <div>
+        <h3>Quaternion to Axis Angle</h3>
+        \(cos(\frac{\theta}{2}):\) 
+        <input type="text" id="quatAxisw" placeholder="w"  value = 0 size="9">
+        <br> \(x*sin(\frac{\theta}{2}):\) 
+        <input type="text" id="quatAxisx" placeholder="x"  value = 0 size="9">
+        <br> \(y*sin(\frac{\theta}{2}):\) 
+        <input type="text" id="quatAxisy" placeholder="y" value = 0 size="9">
+        <br> \(z*sin(\frac{\theta}{2}):\) 
+        <input type="text" id="quatAxisz" placeholder="z"  value = 0 size="9">
+        <br><br>
+        <button id="quatAxisConvert">Convert</button>
+        <br><br>
+        Result:
+        <br>
+        Axis(x,y,z):
+        <input type="text" id="quatAxisResultx" placeholder="x" readonly size="9">
+        <input type="text" id="quatAxisResulty" placeholder="y" readonly size="9">
+        <input type="text" id="quatAxisResultz" placeholder="z" readonly size="9">
+        <br>
+        Angle (in Degrees):
+        <input type="text" id="quatAxisResultAngle" placeholder="angle" readonly size="9">
+    </div>
+
+    <div>
+        <h3>Quaternion to Euler Angle</h3>
+        Quaternion (w, x, y, z):
+        <br>
+        <input type="text" id="quatEulerw" placeholder="w"  value=0 size="9">
+        <input type="text" id="quatEulerx" placeholder="x"  value=0 size="9">
+        <input type="text" id="quatEulery" placeholder="y" value=0 size="9">
+        <input type="text" id="quatEulerz" placeholder="z" value=0 size="9">
+        <br>
+        <br>
+        <button id="quatEulerConvert">Convert</button>
+        <br><br>
+        Result:
+        <!--
+        <br>
+        Intermediate results for each rotation at x, y, z:
+        <br>
+        \( (cos(\frac{x}{2}), sin(\frac{x}{2}), 0, 0 ):\) 
+        <br>
+        <input type="text" id="quatEulerResultw1" placeholder="w"  readonly size="9">
+        <input type="text" id="quatEulerResultx1" placeholder="x"  readonly size="9">
+        <input type="text" id="quatEulerResulty1" placeholder="y"  readonly size="9">
+        <input type="text" id="quatEulerResultz1" placeholder="z"  readonly size="9">
+        <br>
+        \( (cos(\frac{y}{2}), 0, sin(\frac{y}{2}), 0 ):\) 
+        <br>
+        <input type="text" id="quatEulerResultw2" placeholder="w"  readonly size="9">
+        <input type="text" id="quatEulerResultx2" placeholder="x"  readonly size="9">
+        <input type="text" id="quatEulerResulty2" placeholder="y"  readonly size="9">
+        <input type="text" id="quatEulerResultz2" placeholder="z"  readonly size="9">
+        <br>
+        \( (cos(\frac{z}{2}), 0, 0, sin(\frac{z}{2}) ):\) 
+        <br>
+        <input type="text" id="quatEulerResultw3" placeholder="w"  readonly size="9">
+        <input type="text" id="quatEulerResultx3" placeholder="x"  readonly size="9">
+        <input type="text" id="quatEulerResulty3" placeholder="y"  readonly size="9">
+        <input type="text" id="quatEulerResultz3" placeholder="z"  readonly size="9">
+        -->
+        <br>
+        Euler Angle(x,y,z) (in Degrees):
+        <br>
+        <input type="text" id="quatEulerResultx" placeholder="x" readonly size="7">
+        <input type="text" id="quatEulerResulty" placeholder="y" readonly size="7">
+        <input type="text" id="quatEulerResultz" placeholder="z" readonly size="7">
+        <br>
+
+    </div>
+    
 </div>
 
 <div>
@@ -1605,6 +1765,7 @@
     <script src="./3DtransfPoint.js" type="module" defer></script>
     <script src="./3DlransfPoint.js" type="module" defer></script>
     <script src="./axisAngle.js" type="module" defer></script>
+    <script src="./rotationConversions.js" type="module" defer></script>
     <script src="./arcTan.js" type="module" defer></script>
     <script src="./arcLengthBez.js" type="module" defer></script>
     <script src="./shapeU.js" type="module" defer></script>
