@@ -848,11 +848,15 @@ THREE.js converts everything internally to quaternions.
         <select id="textureMappingWrap" name="textureMappingWrap">
             <option value="clamp" selected>Clamp</option>
             <option value="repeat">Repeat</option>
-            <option value="mirror">Mirror</option>
+            <option value="mirror">Mirror (Both)</option>
+            <option value="mirror in u">Mirror in U</option>
+            <option value="mirror in v">Mirror in V</option>
         </select>
         <br><br>
 
         <button id="textureMappingButton">Get Result</button>
+        <br>
+        Mirror in U uses mirrored wrapS; Mirror in V uses mirrored wrapT.
         <br><br>
     </div>
     <div>

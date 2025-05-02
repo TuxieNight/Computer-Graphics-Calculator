@@ -67,6 +67,16 @@ textureLoader.load("./texture.png", function (texture) {
             texture.wrapS = T.MirroredRepeatWrapping;
             texture.wrapT = T.MirroredRepeatWrapping;
         }
+        else if (wrapTypeValue == "mirror in u") {
+            // set the texture to border
+            texture.wrapS = T.MirroredRepeatWrapping;
+            texture.wrapT = T.RepeatWrapping;
+        }
+        else if (wrapTypeValue == "mirror in v") {
+            // set the texture to border
+            texture.wrapS = T.RepeatWrapping;
+            texture.wrapT = T.MirroredRepeatWrapping;
+        }
         texture.needsUpdate = true; // ensure the texture updates with the new wrapping
 
         let geometry = new T.BufferGeometry();
