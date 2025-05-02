@@ -478,6 +478,89 @@
     
 </div>
 
+</div>
+
+<div>
+<h2>4D Matrix-Matrix Multiplication</h2>
+<div class = "side-by-side">
+<div style="flex: 2;">
+    Left Matrix:
+    <br>
+    <input type="text" id="4Dmatrix1st_a" placeholder="a" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_d" placeholder="d" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_g" placeholder="g" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_j" placeholder="j" style = "width: 50px;">
+    <br>
+    <input type="text" id="4Dmatrix1st_b" placeholder="b" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_e" placeholder="e" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_h" placeholder="h" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_k" placeholder="k" style = "width: 50px;">
+    <br>
+    <input type="text" id="4Dmatrix1st_c" placeholder="c" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_f" placeholder="f" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_i" placeholder="i" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_l" placeholder="l" style = "width: 50px;">
+    <br>
+    <input type="text" id="4Dmatrix1st_0_1st" value="0" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_0_2nd" value="0" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_0_3rd" value="0" style = "width: 50px;">
+    <input type="text" id="4Dmatrix1st_1" value="1" style = "width: 50px;">
+</div>
+
+<div style="flex: 3;">
+    Right Matrix:
+    <br>
+    <input type="text" id="4Dmatrix2nd_a" placeholder="a" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_d" placeholder="d" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_g" placeholder="g" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_j" placeholder="j" style = "width: 50px;">
+    <br>
+    <input type="text" id="4Dmatrix2nd_b" placeholder="b" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_e" placeholder="e" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_h" placeholder="h" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_k" placeholder="k" style = "width: 50px;">
+    <br>
+    <input type="text" id="4Dmatrix2nd_c" placeholder="c" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_f" placeholder="f" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_i" placeholder="i" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_l" placeholder="l" style = "width: 50px;">
+    <br>
+    <input type="text" id="4Dmatrix2nd_0_1st" value="0" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_0_2nd" value="0" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_0_3rd" value="0" style = "width: 50px;">
+    <input type="text" id="4Dmatrix2nd_1" value="1" style = "width: 50px;">
+</div>
+</div>
+<button id="4DmatrixMatrixButton">Get Result</button>
+<div>
+    
+</div>
+    <br>
+    Resulting Matrix:
+    <br>
+    <input type="text" id="4DmatrixResult_a" placeholder="a" readonly>
+    <input type="text" id="4DmatrixResult_d" placeholder="d" readonly>
+    <input type="text" id="4DmatrixResult_g" placeholder="g" readonly>
+    <input type="text" id="4DmatrixResult_j" placeholder="j" readonly>
+    <br>
+    <input type="text" id="4DmatrixResult_b" placeholder="b" readonly>
+    <input type="text" id="4DmatrixResult_e" placeholder="e" readonly>
+    <input type="text" id="4DmatrixResult_h" placeholder="h" readonly>
+    <input type="text" id="4DmatrixResult_k" placeholder="k" readonly>
+    <br>
+    <input type="text" id="4DmatrixResult_c" placeholder="c" readonly>
+    <input type="text" id="4DmatrixResult_f" placeholder="f" readonly>
+    <input type="text" id="4DmatrixResult_i" placeholder="i" readonly>
+    <input type="text" id="4DmatrixResult_l" placeholder="l" readonly>
+    <br>
+    <input type="text" id="4DmatrixResult_0_1st" value="0" readonly>
+    <input type="text" id="4DmatrixResult_0_2nd" value="0" readonly>
+    <input type="text" id="4DmatrixResult_0_3rd" value="0" readonly>
+    <input type="text" id="4DmatrixResult_1" value="1" readonly>
+<div>
+
+</div>
+
 <h1 style = "color:blue">2D Calculator</h1>
 <div class="side-by-side">
     <div>
@@ -1128,7 +1211,7 @@
 <div>
 
 </div>
-    <h2>Matrix-Matrix Multiplication</h2>
+    <h2>3D Matrix-Matrix Multiplication</h2>
     <div class = "side-by-side">
     <div style="flex: 2;">
         Left Matrix:
@@ -1540,6 +1623,7 @@
     <script src="./computeBasisFunction.js" type="module" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
     <script src="./bezTangents.js"></script>	
+    <script src="./4DmatrixMatrixMult.js"></script>
     
 		</div>
 	</article>
