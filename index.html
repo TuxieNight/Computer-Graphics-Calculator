@@ -128,7 +128,7 @@
 
             <br>
 
-            Remember that the rotation is in DEGREES, not radians, and is LOCAL NOT GLOBAL. BROKEN: does not work after axes are changed
+            Remember that the rotation is in DEGREES, not radians, and is LOCAL NOT GLOBAL.
 
             <br>
 
@@ -397,6 +397,60 @@
                 <input type="text" id="3dLresultPz" placeholder="z"  readonly size="9">
                 </div>
 </div> 
+
+<h2>Axis Angle</h2>
+<div class="side-by-side">
+    <div>
+        <h3>Global</h3>
+        Axis(x,y,z):
+        <input type="text" id="axisGx" placeholder="x" value = 0 size="9">
+        <input type="text" id="axisGy" placeholder="y" value = 0 size="9">
+        <input type="text" id="axisGz" placeholder="z" value = 0 size="9">
+        <br>
+        Vector(x,y,z):
+        <input type="text" id="vectorGx" placeholder="x" value = 0 size="9">
+        <input type="text" id="vectorGy" placeholder="y" value = 0 size="9">
+        <input type="text" id="vectorGz" placeholder="z" value = 0 size="9">
+        <br>
+        Angle (in Degrees):
+        <input type="text" id="axisGangle" placeholder="angle" value = 0 size="9">
+        <br><br>
+        <button id="axisGconvert">Convert</button>
+        <br>
+        Result(x,y,z):
+        <input type="text" id="axisResultGx" placeholder="x"  readonly size="9">
+        <input type="text" id="axisResultGy" placeholder="y"  readonly size="9">
+        <input type="text" id="axisResultGz" placeholder="z"  readonly size="9">
+    </div>
+
+    <div>
+        <h3>Local</h3>
+        Axis(x,y,z):
+        <input type="text" id="axisLx" placeholder="x" value = 0 size="9">
+        <input type="text" id="axisLy" placeholder="y" value = 0 size="9">
+        <input type="text" id="axisLz" placeholder="z" value = 0 size="9">
+        <br>
+        Vector(x,y,z):
+        <input type="text" id="vectorLx" placeholder="x" value = 0 size="9">
+        <input type="text" id="vectorLy" placeholder="y" value = 0 size="9">
+        <input type="text" id="vectorLz" placeholder="z" value = 0 size="9">
+        <br>
+        Angle (in Degrees):
+        <input type="text" id="axisLangle" placeholder="angle" value = 0 size="9">
+        <br>
+        Local Center(x,y,z):
+        <input type="text" id="centerLx" placeholder="x" value = 0 size="7">
+        <input type="text" id="centerLy" placeholder="y" value = 0 size="7">
+        <input type="text" id="centerLz" placeholder="z" value = 0 size="7">
+        <br>
+        <button id="axisLconvert">Convert</button>
+        <br>
+        Result(x,y,z):
+        <input type="text" id="axisResultLx" placeholder="x"  readonly size="9">
+        <input type="text" id="axisResultLy" placeholder="y"  readonly size="9">
+        <input type="text" id="axisResultLz" placeholder="z"  readonly size="9">
+    </div>
+</div>
 
 <div>
     <h2>Bezier Tangents</h2>
@@ -1558,6 +1612,8 @@
     <script src="./transfPoint.js" type="module" defer></script>
     <script src="./lransfPoint.js" type="module" defer></script>
     <script src="./3DtransfPoint.js" type="module" defer></script>
+    <script src="./3DlransfPoint.js" type="module" defer></script>
+    <script src="./axisAngle.js" type="module" defer></script>
     <script src="./arcTan.js" type="module" defer></script>
     <script src="./arcLengthBez.js" type="module" defer></script>
     <script src="./shapeU.js" type="module" defer></script>

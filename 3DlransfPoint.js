@@ -66,57 +66,57 @@ class Matrix {
 let mtx = new Matrix(1, 0, 0,  0, 1, 0,  0, 0, 1,  0, 0, 0);
 
 // get matrix elements
-let t1x = document.getElementById("3dt1x");
-let t1y = document.getElementById("3dt1y");
-let t1z = document.getElementById("3dt1z");
+let t1x = document.getElementById("3dL1x");
+let t1y = document.getElementById("3dL1y");
+let t1z = document.getElementById("3dL1z");
 
-let t2x = document.getElementById("3dt2x");
-let t2y = document.getElementById("3dt2y");
-let t2z = document.getElementById("3dt2z");
+let t2x = document.getElementById("3dL2x");
+let t2y = document.getElementById("3dL2y");
+let t2z = document.getElementById("3dL2z");
 
-let t3x = document.getElementById("3dt3x");
-let t3y = document.getElementById("3dt3y");
-let t3z = document.getElementById("3dt3z");
+let t3x = document.getElementById("3dL3x");
+let t3y = document.getElementById("3dL3y");
+let t3z = document.getElementById("3dL3z");
 
-let t4x = document.getElementById("3dt4x");
-let t4y = document.getElementById("3dt4y");
-let t4z = document.getElementById("3dt4z");
+let t4x = document.getElementById("3dL4x");
+let t4y = document.getElementById("3dL4y");
+let t4z = document.getElementById("3dL4z");
 
-let t5x = document.getElementById("3dt5x");
-let t5y = document.getElementById("3dt5y");
-let t5z = document.getElementById("3dt5z");
+let t5x = document.getElementById("3dL5x");
+let t5y = document.getElementById("3dL5y");
+let t5z = document.getElementById("3dL5z");
 
-let t6x = document.getElementById("3dt6x");
-let t6y = document.getElementById("3dt6y");
-let t6z = document.getElementById("3dt6z");
+let t6x = document.getElementById("3dL6x");
+let t6y = document.getElementById("3dL6y");
+let t6z = document.getElementById("3dL6z");
 
-let t7x = document.getElementById("3dt7x");
-let t7y = document.getElementById("3dt7y");
-let t7z = document.getElementById("3dt7z");
+let t7x = document.getElementById("3dL7x");
+let t7y = document.getElementById("3dL7y");
+let t7z = document.getElementById("3dL7z");
 
-let t8x = document.getElementById("3dt8x");
-let t8y = document.getElementById("3dt8y");
-let t8z = document.getElementById("3dt8z");
+let t8x = document.getElementById("3dL8x");
+let t8y = document.getElementById("3dL8y");
+let t8z = document.getElementById("3dL8z");
 
-let t9x = document.getElementById("3dt9x");
-let t9y = document.getElementById("3dt9y");
-let t9z = document.getElementById("3dt9z");
+let t9x = document.getElementById("3dL9x");
+let t9y = document.getElementById("3dL9y");
+let t9z = document.getElementById("3dL9z");
 
-let t10x = document.getElementById("3dt10x");
-let t10y = document.getElementById("3dt10y");
-let t10z = document.getElementById("3dt10z");
+let t10x = document.getElementById("3dL10x");
+let t10y = document.getElementById("3dL10y");
+let t10z = document.getElementById("3dL10z");
 
 // get matrix type
-let t1 = document.getElementById("3dt1");
-let t2 = document.getElementById("3dt2");
-let t3 = document.getElementById("3dt3");
-let t4 = document.getElementById("3dt4");
-let t5 = document.getElementById("3dt5");
-let t6 = document.getElementById("3dt6");
-let t7 = document.getElementById("3dt7");
-let t8 = document.getElementById("3dt8");
-let t9 = document.getElementById("3dt9");
-let t10 = document.getElementById("3dt10");
+let t1 = document.getElementById("3dL1");
+let t2 = document.getElementById("3dL2");
+let t3 = document.getElementById("3dL3");
+let t4 = document.getElementById("3dL4");
+let t5 = document.getElementById("3dL5");
+let t6 = document.getElementById("3dL6");
+let t7 = document.getElementById("3dL7");
+let t8 = document.getElementById("3dL8");
+let t9 = document.getElementById("3dL9");
+let t10 = document.getElementById("3dL10");
 
 let transformList = [[t1x, t1y, t1z], [t2x, t2y, t2z], [t3x, t3y, t3z], [t4x, t4y, t4z], [t5x, t5y, t5z],
                     [t6x, t6y, t6z], [t7x, t7y, t7z], [t8x, t8y, t8z], [t9x, t9y, t9z], [t10x, t10y, t10z]];
@@ -124,17 +124,17 @@ let transformList = [[t1x, t1y, t1z], [t2x, t2y, t2z], [t3x, t3y, t3z], [t4x, t4
 let typeList = [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10];
 
 // get input point elements
-let p1x = document.getElementById("3dpx");
-let p1y = document.getElementById("3dpy");
-let p1z = document.getElementById("3dpz");
+let p1x = document.getElementById("3dLpx");
+let p1y = document.getElementById("3dLpy");
+let p1z = document.getElementById("3dLpz");
 
 // get the output element [x,y]
-let resultPoint1 = document.getElementById("3dresultPx");
-let resultPoint2 = document.getElementById("3dresultPy");
-let resultPoint3 = document.getElementById("3dresultPz");
+let resultPoint1 = document.getElementById("3dLresultPx");
+let resultPoint2 = document.getElementById("3dLresultPy");
+let resultPoint3 = document.getElementById("3dLresultPz");
 
 // get the button element
-let convert = document.getElementById("3dtransformButton");
+let convert = document.getElementById("3dLransformButton");
 
 // determine the enlarge factors
 let enlarge = [[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1] ];
