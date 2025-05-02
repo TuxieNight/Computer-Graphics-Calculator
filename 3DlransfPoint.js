@@ -19,6 +19,7 @@ class Matrix {
     }
 
     /**
+     * Does matrix multiplication mtx * this
      * 
      * @param {Matrix} mtx 
      */
