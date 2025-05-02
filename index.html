@@ -396,7 +396,33 @@
                 <input type="text" id="3dLresultPy" placeholder="y"  readonly size="9">
                 <input type="text" id="3dLresultPz" placeholder="z"  readonly size="9">
                 </div>
-</div>            
+</div> 
+
+<div>
+    <h2>Bezier Tangents</h2>
+    Number of Control Points (4 for cubic, 3 for quadratic):
+    <br>
+    <input type="text" id="bezierNumPoints" value = "4">
+    <br><br>
+    Size of Control Points (3 for 3D, 2 for 2D):
+    <br>
+    <input type="text" id="bezierPointSize" value = "3">
+    <br><br>
+    Control Points:
+    <div id="bezTanControlPoints" class = "side-by-side">
+    </div>
+    <br>
+
+    <button id="getBezierTangents">Get Tangents</button>
+    <br><br>
+    Tangent At Beginning:
+    <div id = "bezierTangentBeg"></div>
+    <br><br>
+    Tangent At End:
+    <div id = "bezierTangentEnd"></div>
+
+    
+</div>
 
 <h1 style = "color:blue">2D Calculator</h1>
 <div class="side-by-side">
@@ -1456,7 +1482,8 @@
     <script src="./barycentricInterpolation.js" type="module" defer></script>
     <script src="./normalizeVector.js" type="module" defer></script>
     <script src="./computeBasisFunction.js" type="module" defer></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+    <script src="./bezTangents.js"></script>	
     
 		</div>
 	</article>
