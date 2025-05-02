@@ -60,43 +60,43 @@ let convert = document.getElementById("4DmatrixMatrixButton");
 convert.onclick = function() {
     // calculate the cubic control points
     matrixMult();
-}
+};
 
 function matrixMult() {
     // Convert input values to numbers
-    let a1_val = parseFloat(a1.value);
-    let b1_val = parseFloat(b1.value);
-    let c1_val = parseFloat(c1.value);
-    let d1_val = parseFloat(d1.value);
-    let e1_val = parseFloat(e1.value);
-    let f1_val = parseFloat(f1.value);
-    let g1_val = parseFloat(g1.value);
-    let h1_val = parseFloat(h1.value);
-    let i1_val = parseFloat(i1.value);
-    let j1_val = parseFloat(j1.value);
-    let k1_val = parseFloat(k1.value);
-    let l1_val = parseFloat(l1.value);
-    let zero1_1st_val = parseFloat(zero1_1st.value);
-    let zero1_2nd_val = parseFloat(zero1_2nd.value);
-    let zero1_3rd_val = parseFloat(zero1_3rd.value);
-    let one1_val = parseFloat(one1.value);
+    let a1_val = parseFraction(a1.value);
+    let b1_val = parseFraction(b1.value);
+    let c1_val = parseFraction(c1.value);
+    let d1_val = parseFraction(d1.value);
+    let e1_val = parseFraction(e1.value);
+    let f1_val = parseFraction(f1.value);
+    let g1_val = parseFraction(g1.value);
+    let h1_val = parseFraction(h1.value);
+    let i1_val = parseFraction(i1.value);
+    let j1_val = parseFraction(j1.value);
+    let k1_val = parseFraction(k1.value);
+    let l1_val = parseFraction(l1.value);
+    let zero1_1st_val = parseFraction(zero1_1st.value);
+    let zero1_2nd_val = parseFraction(zero1_2nd.value);
+    let zero1_3rd_val = parseFraction(zero1_3rd.value);
+    let one1_val = parseFraction(one1.value);
     
-    let a2_val = parseFloat(a2.value);
-    let b2_val = parseFloat(b2.value);
-    let c2_val = parseFloat(c2.value);
-    let d2_val = parseFloat(d2.value);
-    let e2_val = parseFloat(e2.value);
-    let f2_val = parseFloat(f2.value);
-    let g2_val = parseFloat(g2.value);
-    let h2_val = parseFloat(h2.value);
-    let i2_val = parseFloat(i2.value);
-    let j2_val = parseFloat(j2.value);
-    let k2_val = parseFloat(k2.value);
-    let l2_val = parseFloat(l2.value);
-    let zero2_1st_val = parseFloat(zero2_1st.value);
-    let zero2_2nd_val = parseFloat(zero2_2nd.value);
-    let zero2_3rd_val = parseFloat(zero2_3rd.value);
-    let one2_val = parseFloat(one2.value);
+    let a2_val = parseFraction(a2.value);
+    let b2_val = parseFraction(b2.value);
+    let c2_val = parseFraction(c2.value);
+    let d2_val = parseFraction(d2.value);
+    let e2_val = parseFraction(e2.value);
+    let f2_val = parseFraction(f2.value);
+    let g2_val = parseFraction(g2.value);
+    let h2_val = parseFraction(h2.value);
+    let i2_val = parseFraction(i2.value);
+    let j2_val = parseFraction(j2.value);
+    let k2_val = parseFraction(k2.value);
+    let l2_val = parseFraction(l2.value);
+    let zero2_1st_val = parseFraction(zero2_1st.value);
+    let zero2_2nd_val = parseFraction(zero2_2nd.value);
+    let zero2_3rd_val = parseFraction(zero2_3rd.value);
+    let one2_val = parseFraction(one2.value);
 
     // calculate the result matrix elements
     let a = a2_val * a1_val   +   b2_val * d1_val +   c2_val * g1_val  +  zero2_1st_val * j1_val;
@@ -137,4 +137,16 @@ function matrixMult() {
     zero_result_2nd.value = secondZero;
     zero_result_3rd.value = thirdZero;
     one_result.value = one;
+}
+
+function parseFraction(number) {
+    let parts = number.split('/');
+    if (parts.length === 2) {
+        let numerator = parseFloat(parts[0]);
+        let denominator = parseFloat(parts[1]);
+        if (!isNaN(numerator) && !isNaN(denominator) && denominator !== 0) {
+            return numerator / denominator;
+        }
+    }
+    return parseFloat(number); // fallback to parseFloat if not a fraction
 }
