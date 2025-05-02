@@ -22,9 +22,9 @@ axisGconvert.onclick = function() {
 
     let result = rotateVectorAxisAngle(vector, axis, angle);
 
-    axisGresultX.value = result[0].toFixed(2);
-    axisGresultY.value = result[1].toFixed(2);
-    axisGresultZ.value = result[2].toFixed(2);
+    axisGresultX.value = result[0].toFixed(5);
+    axisGresultY.value = result[1].toFixed(5);
+    axisGresultZ.value = result[2].toFixed(5);
 }
 
 // LOCAL AXIS ANGLE ROTATION CALCULATOR
@@ -67,9 +67,9 @@ axisLconvert.onclick = function() {
     result[1] += center[1];
     result[2] += center[2];
 
-    axisLresultX.value = result[0].toFixed(2);
-    axisLresultY.value = result[1].toFixed(2);
-    axisLresultZ.value = result[2].toFixed(2);
+    axisLresultX.value = result[0].toFixed(5);
+    axisLresultY.value = result[1].toFixed(5);
+    axisLresultZ.value = result[2].toFixed(5);
 }
 
 /**
@@ -120,7 +120,7 @@ function rotateVectorAxisAngle(vector, axis, angle) {
 // const angle = Math.PI / 2; // 90 degrees in radians
 
 // const rotatedVector = rotateVectorAxisAngle(vector, axis, angle);
-// rotatedVector[0] = rotatedVector[0].toFixed(2);
-// rotatedVector[1] = rotatedVector[1].toFixed(2);
-// rotatedVector[2] = rotatedVector[2].toFixed(2);
+// rotatedVector[0] = rotatedVector[0].toFixed(5);
+// rotatedVector[1] = rotatedVector[1].toFixed(5);
+// rotatedVector[2] = rotatedVector[2].toFixed(5);
 // console.log("Rotated Vector:", rotatedVector);
