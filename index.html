@@ -627,6 +627,83 @@
     </div>
 </div>
 
+<div class = "side-by-side">
+    <div>
+        <h2>Texture Mapping</h2>
+        <image src="./texture.png" alt="Texture Mapping" width="200" height="200">
+        <br>
+
+        <b>Provide Order of Plane Vertices:</b>
+        <br>
+        Lower-Left: <select id="textureMappingLL" name="textureMappingLL">
+            <option value="0" selected>0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br>
+        Lower-Right: <select id="textureMappingLR" name="textureMappingLR">
+            <option value="0">0</option>
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>    
+        </select>
+        <br>
+        Upper-Right: <select id="textureMappingUR" name="textureMappingUR">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+        </select>
+        <br>
+        Upper-Left: <select id="textureMappingUL" name="textureMappingUL">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+        </select>
+        <br><br>
+
+        <b>Provide U,V Values of Vertices:</b>
+        <br>
+        Vertex 0:
+        <input type="text" id="textureMapping0u" value="0" style="width: 50px;">
+        <input type="text" id="textureMapping0v" value = "0" style="width: 50px;">
+        <br>
+        Vertex 1: 
+        <input type="text" id="textureMapping1u" value = "1" style="width: 50px;">
+        <input type="text" id="textureMapping1v" value = "0" style="width: 50px;">
+        <br>
+        Vertex 2:
+        <input type="text" id="textureMapping2u" value = "1" style="width: 50px;">
+        <input type="text" id="textureMapping2v" value = "1" style="width: 50px;">
+        <br>
+        Vertex 3:
+        <input type="text" id="textureMapping3u" value = "0" style="width: 50px;">
+        <input type="text" id="textureMapping3v" value = "1" style="width: 50px;">
+        <br><br>
+
+        <b>Provide Type of Texture Wrapping:</b>
+        <br>
+        <select id="textureMappingWrap" name="textureMappingWrap">
+            <option value="0">Clamp</option>
+            <option value="1">Repeat</option>
+            <option value="2">Mirror</option>
+        </select>
+        <br><br>
+
+        <button id="textureMappingButton">Get Result</button>
+        <br><br>
+    </div>
+    <div>
+        <br><br>
+        <image src="./textureInfo.png" alt="Texture Mapping" width="200" height="200">
+        <br>    
+        <b>Result:</b>
+        <div id = "textureMapping"></div>
+    </div>
+</div>
+
 <h1 style = "color:blue">2D Calculator</h1>
 <div class="side-by-side">
     <div>
@@ -1659,6 +1736,7 @@
     <input type="text" id="aresultPy" placeholder="y"  readonly>
     </div>
 
+    <script src="./textureMapping.js" type="module"></script>
     <script src="./quadToCubic.js" type="module" defer></script>    
     <script src="./cubicAtEndQuad.js" type="module" defer></script>   
     <script src="./quadAtEndCubic.js" type="module" defer></script>  
@@ -1688,9 +1766,9 @@
     <script src="./normalizeVector.js" type="module" defer></script>
     <script src="./computeBasisFunction.js" type="module" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
-    <script src="./bezTangents.js"></script>	
-    <script src="./4DmatrixMatrixMult.js"></script>
-    <script src="./4DmatrixVectorMult.js"></script>
+    <script src="./bezTangents.js" type="module"></script>	
+    <script src="./4DmatrixMatrixMult.js" type="module"></script>
+    <script src="./4DmatrixVectorMult.js" type="module"></script>
     
 		</div>
 	</article>
