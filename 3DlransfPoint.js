@@ -141,6 +141,9 @@ let enlarge = [[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1],
 
 convert.onclick = function() {
 
+    // reset enlarge
+    enlarge = [[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1] ];
+
     for (let i = 0; i < transformList.length; i++) {
 
         if (typeList[i].value == "E") {
