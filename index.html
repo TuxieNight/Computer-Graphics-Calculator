@@ -787,6 +787,98 @@ THREE.js converts everything internally to quaternions.
     </div>
 </div>
 
+<h2>Shaders</h2>
+
+<span style="font-size: 23px;">Vector Shader:</span>
+<br>
+
+<pre><code class="w3-codespan" id = "vs_1">varying vec2 v_uv;
+void main() {
+&nbsp; v_uv = uv;
+&nbsp; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+}
+</code></pre>
+
+<span style="font-size: 23px;">Fragment Shader:</span>
+
+<pre><code class="w3-codespan" id = "fs_1">varying vec2 v_uv;
+void main() {
+&nbsp; vec3 dark = vec3(0.1, 0.1, 0.1);
+&nbsp; vec3 light = vec3(0.9, 0.9, 0.9);
+&nbsp; vec2 xy = abs(fract(v_uv / <span style = "background-color: rgb(191, 253, 184)">0.25</span>) - <span style = "background-color:rgb(127, 255, 255)">0.5</span>); <b style="color: darkolivegreen">// affects # of repetitions; affects start point</b>
+&nbsp; <span style = "background-color: rgb(199, 239, 253);">float d = max(xy.x, xy.y);</span> <b style="color: darkolivegreen">// affects shape; currently square</b>
+&nbsp; float e = fwidth(d) / 2.0;
+&nbsp; float dc = smoothstep(0.125 - e, 0.125 + e, d);
+&nbsp; gl_FragColor = vec4(mix(dark, light, dc), 1.0);
+}
+</code></pre>
+
+<div id = "div1">   </div>
+  <script src="sphere.js" type="module" defer></script>
+
+<br>
+
+Choose the number of repetitions and the offset of the shape.
+<br>
+<select id = "shaderA">
+    <option value="0">4 REPETITIONS: vec2 xy = abs(fract(v_uv / 0.25) - 0.5);</option>
+    <option value="1">2 REPETITIONS: vec2 xy = abs(fract(v_uv / 0.5) - 0.5);</option>
+    <option value="2">8 REPETITIONS: vec2 xy = abs(fract(v_uv / 0.125) - 0.5);</option>
+    <option value="3">16 REPETITIONS: vec2 xy = abs(fract(v_uv / 0.0625) - 0.5);</option>
+    <option value="4">4 REPETITIONS: vec2 xy = abs(fract(v_uv / 0.25) - 0.25);</option>
+    <option value="5">2 REPETITIONS: vec2 xy = abs(fract(v_uv / 0.5) - 0.25);</option>
+    <option value="6">8 REPETITIONS: vec2 xy = abs(fract(v_uv / 0.125) - 0.25);</option>
+    <option value="7">16 REPETITIONS: vec2 xy = abs(fract(v_uv / 0.0625) - 0.25);</option>
+    <option value="8">4 REPETITIONS vec2 xy = abs(fract(v_uv / 0.25) - 0.0);</option>
+</select>
+
+<br>
+Choose the shape.
+<br>
+Notice that when using \(xy.x^{n}\) and \(xy.y^{n}\), n = 2 creates a circle and higher m values make more square-like shapes.
+<br>
+<select id = "shaderD">
+    <option value="0">SQUARE: float d = max(xy.x, xy.y);</option>
+    <option value="1">DIAMOND: float d = abs(xy.x) + abs(xy.y);</option>
+    <option value="2">CIRCLE: float d = xy.x * xy.x + xy.y * xy.y;</option>
+    <option value="3">CIRCLE: float d = length(xy); // square root of other circle option!</option>
+    <option value="4">ELLIPSE: float d = length(xy) + 0.5 * (xy.x + xy.y);</option>
+    <option value="5">SQUARE-CIRCLE: float d = xy.x*xy.x*xy.x + xy.y*xy.y;</option>
+    <option value="6">SQUARE-CIRCLE: float d = xy.x*xy.x*xy.x + xy.y*xy.y*xy.y;</option>
+    <option value="7">CRISS-CROSS: float d = max(xy.x, xy.y) - min(xy.x, xy.y);</option>
+    <option value="8">4-POINTED STAR: float d = max(xy.x, xy.y) - min(xy.x, xy.y) + 0.5 * (xy.x + xy.y);</option>
+</select>
+
+<br><br>
+Edit the vertex shader code:
+<br>
+<textarea id="vs_edit" rows="5" cols="100">
+varying vec2 v_uv;
+void main() {
+    v_uv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+}
+</textarea>
+<br>
+Edit the fragment shader code:
+<br>
+<textarea id="fs_edit" rows="10" cols="100">
+varying vec2 v_uv;
+void main() {
+    vec3 dark = vec3(0.1, 0.1, 0.1);
+    vec3 light = vec3(0.9, 0.9, 0.9);
+    vec2 xy = abs(fract(v_uv / 0.25) - 0.5); // affects # of repetitions; affects start point
+    float d = max(xy.x, xy.y); // affects shape; currently square
+    float e = fwidth(d) / 2.0;
+    float dc = smoothstep(0.125 - e, 0.125 + e, d);
+    gl_FragColor = vec4(mix(dark, light, dc), 1.0);
+}
+</textarea>
+<br>
+<button id="shaderEdit">Apply Shader Edits</button>
+
+<br>
+
 <h1 style = "color:blue">2D Calculator</h1>
 <div class="side-by-side">
     <div>
@@ -1852,6 +1944,7 @@ THREE.js converts everything internally to quaternions.
     <script src="./bezTangents.js"></script>	
     <script src="./4DmatrixMatrixMult.js"></script>
     <script src="./4DmatrixVectorMult.js"></script>
+    <script src="./sphere.js"></script>
     
 		</div>
 	</article>
