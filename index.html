@@ -83,6 +83,34 @@
 </div>
 
 <div>
+    <h2>Bilinear Interpolation</h2>
+    X: <input type=text" id="bilinearX" placeholder="x" value = 0 size = 7/>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    Y: <input type=text" id="bilinearY" placeholder="x" value = 0 size = 7/>
+    <br>
+    Top Left X: <input type="text" id="bilinearTopLeftX" placeholder="x" value = 0 size = 7/>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+    Top Left Y: <input type="text" id="bilinearTopLeftY" placeholder="y" value = 0 size = 7/>
+    <br>
+    Bottom Right X: <input type="text" id="bilinearBottomRightX" placeholder="x" value = 0 size = 7/>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+    Bottom Right Y: <input type="text" id="bilinearBottomRightY" placeholder="y" value = 0 size = 7/>
+    <br><br>
+    Top Left Value: <input type="text" id="bilinearTopLeftValue" placeholder="value" value = 0 size = 7/>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+    Top Right Value: <input type="text" id="bilinearTopRightValue" placeholder="value" value = 0 size = 7/>
+    <br>
+    Bottom Left Value: <input type="text" id="bilinearBottomLeftValue" placeholder="value" value = 0 size = 7/>
+    &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+    Bottom Right Value: <input type="text" id="bilinearBottomRightValue" placeholder="value" value = 0 size = 7/>
+    <br>
+    <input type="button" id="bilinearInterpolate" value="Get Value">
+    <br><br>
+    Result:
+    <input type="text" id="bilinearResult" placeholder="value" readonly size = 7/>
+</div>
+
+<div>
     <h2>Vector Normalization (Accepts Fractions or Decimals)</h2>
     Size of Vector:
     <br>
@@ -2053,6 +2081,7 @@ void main() {
     <script src="./bezTangents.js" type="module"></script>	
     <script src="./4DmatrixMatrixMult.js" type="module"></script>
     <script src="./4DmatrixVectorMult.js" type="module"></script>
+    <script src="./bilinear_interpolation.js" type="module"></script>
     
 		</div>
 	</article>
