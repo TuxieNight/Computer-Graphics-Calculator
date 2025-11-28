@@ -3,7 +3,8 @@ This project answers basic computer graphics questions related to matrix and vec
 ## Credit to CS559
 The content in the CS559-Three, css, and libs folders were provided by the instructors of the class CS559 at UW-Madison. The rest was developed by Peyton and Riley Howardsmith in 2025.
 
-Note from Instructors:
+
+## Note from Instructors:
 
 Students should run a local web server and start with the `index.html` page.
 The html files may not work as "files" without a local server.
