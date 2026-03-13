@@ -1,3 +1,5 @@
+Access the calculator here: https://tuxienight.github.io/Computer-Graphics-Calculator/
+
 This project answers basic computer graphics questions related to matrix and vector multiplication, vector normalization, barycentric interpolation, bilinear interpolation, converting between different types of curve representations, finding a point on a curve given its basis functions and control points, calculating curve tangents, connecting two different curves with C(1) or G(1) continuity, splitting a curve with Decastlejau, interpolating many line segments, applying Arc-Length parameterization, applying transformations (rotations, translates, and scaling) in 2D and 3D, converting between different types of rotation representations, mapping textures, and shading.
 
 ## Credit to CS559
